@@ -18,21 +18,21 @@ export function ProductCard({ product }: { product: Product }) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-onyx/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         {product.isNew && (
-          <span className="absolute top-3 left-3 px-3 py-1 text-[0.6rem] tracking-[0.25em] uppercase bg-champagne text-onyx font-semibold">
+          <span className="absolute top-3 left-3 px-3 py-1 text-[0.6rem] tracking-[0.25em] uppercase bg-marguerite text-onyx font-semibold">
             Novo
           </span>
         )}
         {product.oldPrice && (
-          <span className="absolute top-3 right-3 px-3 py-1 text-[0.6rem] tracking-[0.25em] uppercase border border-champagne text-champagne bg-onyx/70">
+          <span className="absolute top-3 right-3 px-3 py-1 text-[0.6rem] tracking-[0.25em] uppercase border border-marguerite text-marguerite bg-onyx/70">
             Oferta
           </span>
         )}
       </div>
       <div className="pt-4 space-y-1">
-        <div className="text-[0.65rem] tracking-[0.25em] uppercase text-champagne/80">
+        <div className="text-[0.65rem] tracking-[0.25em] uppercase text-marguerite/80">
           {product.categoryLabel}
         </div>
-        <h3 className="font-display text-lg text-ivory group-hover:text-champagne transition-colors">
+        <h3 className="font-display text-lg text-ivory group-hover:text-marguerite transition-colors">
           {product.name}
         </h3>
         <div className="flex items-baseline gap-2 pt-1">

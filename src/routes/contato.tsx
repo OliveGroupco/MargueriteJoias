@@ -7,8 +7,8 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
-      { title: "Contato · Cintilare" },
-      { name: "description", content: "Fale com a Cintilare. Atendimento via WhatsApp, e-mail e redes sociais." },
+      { title: "Contato · Marguerite Jóias" },
+      { name: "description", content: "Fale com a Marguerite Jóias. Atendimento via WhatsApp, e-mail e redes sociais." },
     ],
   }),
   component: Contato,
@@ -23,7 +23,7 @@ function Contato() {
       toast.error("Preencha todos os campos");
       return;
     }
-    const msg = `Olá Cintilare!\n\nNome: ${form.nome}\nE-mail: ${form.email}\n\n${form.mensagem}`;
+    const msg = `Olá Marguerite Jóias!\n\nNome: ${form.nome}\nE-mail: ${form.email}\n\n${form.mensagem}`;
     window.open(whatsappLink(msg), "_blank");
     toast.success("Mensagem enviada via WhatsApp");
     setForm({ nome: "", email: "", mensagem: "" });
@@ -46,7 +46,7 @@ function Contato() {
             <input
               value={form.nome}
               onChange={(e) => setForm({ ...form, nome: e.target.value })}
-              className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-3 text-ivory focus:outline-none focus:border-champagne"
+              className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-3 text-ivory focus:outline-none focus:border-marguerite"
               placeholder="Seu nome completo"
             />
           </div>
@@ -56,7 +56,7 @@ function Contato() {
               type="email"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-3 text-ivory focus:outline-none focus:border-champagne"
+              className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-3 text-ivory focus:outline-none focus:border-marguerite"
               placeholder="seu@email.com"
             />
           </div>
@@ -66,7 +66,7 @@ function Contato() {
               rows={6}
               value={form.mensagem}
               onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
-              className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-3 text-ivory focus:outline-none focus:border-champagne resize-none"
+              className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-3 text-ivory focus:outline-none focus:border-marguerite resize-none"
               placeholder="Como podemos ajudar?"
             />
           </div>
@@ -77,14 +77,14 @@ function Contato() {
 
         <div className="space-y-6">
           {[
-            { icon: MessageCircle, t: "WhatsApp", d: "(62) 98145-2436", href: whatsappLink("Olá Cintilare!") },
+            { icon: MessageCircle, t: "WhatsApp", d: "(62) 98145-2436", href: whatsappLink("Olá Marguerite Jóias!") },
             { icon: Mail, t: "E-mail", d: "contato@cintilare.com", href: "mailto:contato@cintilare.com" },
             { icon: MapPin, t: "Endereço", d: "Goiânia · GO · Brasil" },
             { icon: Clock, t: "Horário", d: "Seg a Sex · 9h às 18h" },
           ].map(({ icon: Icon, t, d, href }) => {
             const content = (
-              <div className="flex items-start gap-4 p-6 border border-border/60 rounded-sm hover:border-champagne/60 transition bg-card/30">
-                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-champagne/40 text-champagne">
+              <div className="flex items-start gap-4 p-6 border border-border/60 rounded-sm hover:border-marguerite/60 transition bg-card/30">
+                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-marguerite/40 text-marguerite">
                   <Icon className="h-5 w-5" />
                 </div>
                 <div>
@@ -101,10 +101,10 @@ function Contato() {
           })}
 
           <div className="flex gap-3 pt-4">
-            <a href="https://instagram.com" className="grid h-12 w-12 place-items-center rounded-full border border-border hover:border-champagne hover:text-champagne text-ivory transition">
+            <a href="https://instagram.com" className="grid h-12 w-12 place-items-center rounded-full border border-border hover:border-marguerite hover:text-marguerite text-ivory transition">
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="https://facebook.com" className="grid h-12 w-12 place-items-center rounded-full border border-border hover:border-champagne hover:text-champagne text-ivory transition">
+            <a href="https://facebook.com" className="grid h-12 w-12 place-items-center rounded-full border border-border hover:border-marguerite hover:text-marguerite text-ivory transition">
               <Facebook className="h-5 w-5" />
             </a>
           </div>

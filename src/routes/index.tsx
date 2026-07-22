@@ -8,9 +8,9 @@ import { whatsappLink } from "@/lib/whatsapp";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Cintilare · Joias de Prata 925 Premium" },
-      { name: "description", content: "Descubra a joalheria contemporânea Cintilare. Anéis, colares, brincos e pulseiras em prata 925 com design refinado." },
-      { property: "og:title", content: "Cintilare · Joias de Prata 925" },
+      { title: "Marguerite Jóias · Joias de Prata 925 Premium" },
+      { name: "description", content: "Descubra a joalheria contemporânea Marguerite Jóias. Anéis, colares, brincos e pulseiras em prata 925 com design refinado." },
+      { property: "og:title", content: "Marguerite Jóias · Joias de Prata 925" },
       { property: "og:image", content: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=1200&q=80" },
     ],
   }),
@@ -37,18 +37,17 @@ function Home() {
           <div className="max-w-2xl animate-fade-up">
             <div className="eyebrow mb-6">Coleção Inverno 2026</div>
             <h1 className="font-display text-5xl md:text-7xl leading-[1.05] text-ivory">
-              A elegância que <em className="text-gradient-champagne not-italic">cintila</em> com você.
+              Sua beleza é <em className="text-gradient-marguerite not-italic">única</em> e merece joias à altura!
             </h1>
             <p className="mt-8 max-w-xl text-base md:text-lg text-ivory/80 leading-relaxed">
-              Joias artesanais em prata 925 maciça, criadas para acompanhar histórias.
-              Design contemporâneo, acabamento de alta joalheria.
+              Loja on-line (Varejo) de joias contemporâneas em prata. Enviamos para todo o Brasil diretamente de Goiânia - GO.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link to="/catalogo" className="btn-luxe btn-luxe-hover">
                 Explorar Coleção <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href={whatsappLink("Olá! Quero conhecer as novidades da Cintilare.")}
+                href={whatsappLink("Olá! Quero conhecer as novidades da Marguerite Jóias.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline-luxe"
@@ -71,7 +70,7 @@ function Home() {
             { icon: Heart, t: "Trocas Facilitadas", d: "30 dias para troca" },
           ].map(({ icon: Icon, t, d }) => (
             <div key={t} className="flex items-start gap-4">
-              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-champagne/40 text-champagne">
+              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-marguerite/40 text-marguerite">
                 <Icon className="h-5 w-5" />
               </div>
               <div className="min-w-0">
@@ -110,7 +109,7 @@ function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-onyx via-onyx/40 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <div className="font-display text-2xl text-ivory">{cat.label}</div>
-                  <div className="text-xs text-champagne mt-1 tracking-[0.2em] uppercase">
+                  <div className="text-xs text-marguerite mt-1 tracking-[0.2em] uppercase">
                     {cat.description}
                   </div>
                 </div>
@@ -129,14 +128,14 @@ function Home() {
           </div>
           <Link
             to="/catalogo"
-            className="hidden md:inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-champagne hover:gap-3 transition-all"
+            className="hidden md:inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-marguerite hover:gap-3 transition-all"
           >
             Ver todas <ArrowRight className="h-3 w-3" />
           </Link>
         </div>
           {isLoading ? (
             <div className="grid place-items-center py-10">
-              <Loader2 className="h-8 w-8 animate-spin text-champagne" />
+              <Loader2 className="h-8 w-8 animate-spin text-marguerite" />
             </div>
           ) : (
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -163,7 +162,7 @@ function Home() {
               { n: "Luiza M.", t: "Já é minha terceira compra. As peças mantêm o brilho como no primeiro dia.", l: "Brasília" },
             ].map((d) => (
               <figure key={d.n} className="rounded-sm border border-border/60 bg-card/40 p-8 backdrop-blur">
-                <div className="flex gap-1 text-champagne mb-4">
+                <div className="flex gap-1 text-marguerite mb-4">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-current" />
                   ))}
@@ -172,7 +171,7 @@ function Home() {
                   "{d.t}"
                 </blockquote>
                 <figcaption className="mt-6 text-sm">
-                  <div className="text-champagne">{d.n}</div>
+                  <div className="text-marguerite">{d.n}</div>
                   <div className="text-muted-foreground text-xs mt-1">{d.l}</div>
                 </figcaption>
               </figure>
@@ -183,7 +182,7 @@ function Home() {
 
       {/* CTA WHATSAPP */}
       <section className="container-luxe py-24">
-        <div className="relative overflow-hidden rounded-sm border border-champagne/30 p-12 md:p-16 text-center">
+        <div className="relative overflow-hidden rounded-sm border border-marguerite/30 p-12 md:p-16 text-center">
           <div className="absolute inset-0 opacity-30" style={{ background: "var(--gradient-luxe)" }} />
           <div className="relative">
             <div className="eyebrow mb-4">Atendimento Personalizado</div>
@@ -194,7 +193,7 @@ function Home() {
               Fale com nossa consultoria via WhatsApp e descubra a peça perfeita para você ou para presentear.
             </p>
             <a
-              href={whatsappLink("Olá Cintilare! Gostaria de uma consultoria personalizada.")}
+              href={whatsappLink("Olá Marguerite Jóias! Gostaria de uma consultoria personalizada.")}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-luxe btn-luxe-hover mt-10"

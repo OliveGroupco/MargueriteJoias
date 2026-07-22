@@ -4,7 +4,7 @@ import { useCart, cart } from "@/lib/cart-store";
 import { formatBRL } from "@/lib/products";
 
 export const Route = createFileRoute("/carrinho")({
-  head: () => ({ meta: [{ title: "Carrinho · Cintilare" }] }),
+  head: () => ({ meta: [{ title: "Carrinho · Marguerite Jóias" }] }),
   component: Carrinho,
 });
 
@@ -14,7 +14,7 @@ function Carrinho() {
   if (items.length === 0) {
     return (
       <div className="container-luxe py-32 text-center">
-        <div className="grid h-20 w-20 mx-auto place-items-center rounded-full border border-champagne/40 text-champagne mb-6">
+        <div className="grid h-20 w-20 mx-auto place-items-center rounded-full border border-marguerite/40 text-marguerite mb-6">
           <ShoppingBag className="h-8 w-8" />
         </div>
         <h1 className="font-display text-4xl text-ivory">Seu carrinho está vazio</h1>
@@ -43,17 +43,17 @@ function Carrinho() {
               </Link>
               <div className="flex-1 min-w-0 flex flex-col">
                 <div className="eyebrow">{product.categoryLabel}</div>
-                <Link to="/produto/$slug" params={{ slug: product.slug }} className="font-display text-lg text-ivory truncate hover:text-champagne">
+                <Link to="/produto/$slug" params={{ slug: product.slug }} className="font-display text-lg text-ivory truncate hover:text-marguerite">
                   {product.name}
                 </Link>
                 <div className="text-sm text-muted-foreground mt-1">{formatBRL(product.price)} cada</div>
                 <div className="mt-auto flex items-center justify-between gap-3 pt-3">
                   <div className="flex items-center border border-border rounded-sm">
-                    <button onClick={() => cart.setQty(product.id, qty - 1)} className="grid h-9 w-9 place-items-center text-ivory hover:text-champagne">
+                    <button onClick={() => cart.setQty(product.id, qty - 1)} className="grid h-9 w-9 place-items-center text-ivory hover:text-marguerite">
                       <Minus className="h-3 w-3" />
                     </button>
                     <span className="w-10 text-center text-sm text-ivory">{qty}</span>
-                    <button onClick={() => cart.setQty(product.id, qty + 1)} className="grid h-9 w-9 place-items-center text-ivory hover:text-champagne">
+                    <button onClick={() => cart.setQty(product.id, qty + 1)} className="grid h-9 w-9 place-items-center text-ivory hover:text-marguerite">
                       <Plus className="h-3 w-3" />
                     </button>
                   </div>
@@ -74,17 +74,17 @@ function Carrinho() {
           <div className="hairline" />
           <div className="space-y-3 text-sm">
             <div className="flex justify-between text-ivory/80"><span>Subtotal</span><span>{formatBRL(subtotal)}</span></div>
-            <div className="flex justify-between text-ivory/80"><span>Frete</span><span className="text-champagne">A calcular</span></div>
+            <div className="flex justify-between text-ivory/80"><span>Frete</span><span className="text-marguerite">A calcular</span></div>
           </div>
           <div className="hairline" />
           <div className="flex justify-between items-baseline">
             <span className="text-ivory">Total</span>
-            <span className="font-display text-2xl text-gradient-champagne">{formatBRL(subtotal)}</span>
+            <span className="font-display text-2xl text-gradient-marguerite">{formatBRL(subtotal)}</span>
           </div>
           <Link to="/checkout" className="btn-luxe btn-luxe-hover w-full">
             Finalizar Compra <ArrowRight className="h-4 w-4" />
           </Link>
-          <Link to="/catalogo" className="block text-center text-xs tracking-[0.22em] uppercase text-muted-foreground hover:text-champagne">
+          <Link to="/catalogo" className="block text-center text-xs tracking-[0.22em] uppercase text-muted-foreground hover:text-marguerite">
             Continuar comprando
           </Link>
         </aside>

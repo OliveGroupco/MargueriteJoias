@@ -60,7 +60,7 @@ function Categorias() {
       <div className="grid lg:grid-cols-[1fr_320px] gap-8">
         <div>
           {isLoading ? (
-            <div className="grid place-items-center py-20"><Loader2 className="h-6 w-6 animate-spin text-champagne" /></div>
+            <div className="grid place-items-center py-20"><Loader2 className="h-6 w-6 animate-spin text-marguerite" /></div>
           ) : !data || data.length === 0 ? (
             <div className="p-16 border border-border/60 rounded-sm bg-card/30 text-center text-muted-foreground">
               Nenhuma categoria.
@@ -89,11 +89,11 @@ function Categorias() {
           <h2 className="font-display text-xl text-ivory">Nova categoria</h2>
           <div>
             <label className="eyebrow block mb-2">Nome</label>
-            <input value={nome} onChange={(e) => setNome(e.target.value)} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-ivory focus:outline-none focus:border-champagne" />
+            <input value={nome} onChange={(e) => setNome(e.target.value)} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-ivory focus:outline-none focus:border-marguerite" />
           </div>
           <div>
             <label className="eyebrow block mb-2">Descrição</label>
-            <textarea rows={3} value={desc} onChange={(e) => setDesc(e.target.value)} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-ivory focus:outline-none focus:border-champagne resize-none" />
+            <textarea rows={3} value={desc} onChange={(e) => setDesc(e.target.value)} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-ivory focus:outline-none focus:border-marguerite resize-none" />
           </div>
           <button onClick={() => nome.trim() && create.mutate()} disabled={!nome.trim() || create.isPending} className="btn-luxe btn-luxe-hover w-full disabled:opacity-50">
             <Plus className="h-4 w-4" /> Adicionar

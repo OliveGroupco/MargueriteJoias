@@ -79,7 +79,7 @@ function ProdutosAdmin() {
       </header>
 
       {isLoading ? (
-        <div className="grid place-items-center py-20"><Loader2 className="h-6 w-6 animate-spin text-champagne" /></div>
+        <div className="grid place-items-center py-20"><Loader2 className="h-6 w-6 animate-spin text-marguerite" /></div>
       ) : !produtos || produtos.length === 0 ? (
         <div className="p-16 border border-border/60 rounded-sm bg-card/30 text-center text-muted-foreground">
           Nenhum produto cadastrado.
@@ -107,7 +107,7 @@ function ProdutosAdmin() {
                       <div>
                         <div className="text-ivory flex items-center gap-2">
                           {p.nome}
-                          {p.destaque && <Star className="h-3 w-3 fill-champagne text-champagne" />}
+                          {p.destaque && <Star className="h-3 w-3 fill-marguerite text-marguerite" />}
                         </div>
                         <div className="text-xs text-muted-foreground">{p.slug}</div>
                       </div>
@@ -116,13 +116,13 @@ function ProdutosAdmin() {
                   <td className="p-4 text-ivory">{formatBRL(Number(p.preco))}</td>
                   <td className="p-4 text-ivory">{p.estoque}</td>
                   <td className="p-4">
-                    <span className={`text-xs px-2 py-1 rounded-sm ${p.ativo ? "bg-champagne/15 text-champagne" : "bg-muted text-muted-foreground"}`}>
+                    <span className={`text-xs px-2 py-1 rounded-sm ${p.ativo ? "bg-marguerite/15 text-marguerite" : "bg-muted text-muted-foreground"}`}>
                       {p.ativo ? "Ativo" : "Inativo"}
                     </span>
                   </td>
                   <td className="p-4 text-right">
                     <div className="flex justify-end gap-2">
-                      <button onClick={() => { setEditing(p); setOpen(true); }} className="p-2 text-muted-foreground hover:text-champagne">
+                      <button onClick={() => { setEditing(p); setOpen(true); }} className="p-2 text-muted-foreground hover:text-marguerite">
                         <Pencil className="h-4 w-4" />
                       </button>
                       <button
@@ -219,7 +219,7 @@ function ProductDialog({
             <select
               value={form.categoria_id ?? ""}
               onChange={(e) => setForm({ ...form, categoria_id: e.target.value || null })}
-              className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-3 text-ivory focus:outline-none focus:border-champagne"
+              className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-3 text-ivory focus:outline-none focus:border-marguerite"
             >
               <option value="">— Sem categoria —</option>
               {categorias.map((c) => <option key={c.id} value={c.id}>{c.nome}</option>)}
@@ -233,7 +233,7 @@ function ProductDialog({
                 value={imgInput}
                 onChange={(e) => setImgInput(e.target.value)}
                 placeholder="https://..."
-                className="flex-1 bg-onyx-soft/40 border border-border rounded-sm px-4 py-2 text-sm text-ivory focus:outline-none focus:border-champagne"
+                className="flex-1 bg-onyx-soft/40 border border-border rounded-sm px-4 py-2 text-sm text-ivory focus:outline-none focus:border-marguerite"
               />
               <button
                 onClick={() => { if (imgInput.trim()) { setForm({ ...form, imagens: [...form.imagens, imgInput.trim()] }); setImgInput(""); } }}
@@ -257,11 +257,11 @@ function ProductDialog({
 
           <div className="flex gap-6 pt-2">
             <label className="flex items-center gap-2 text-sm text-ivory cursor-pointer">
-              <input type="checkbox" checked={form.destaque} onChange={(e) => setForm({ ...form, destaque: e.target.checked })} className="accent-champagne" />
+              <input type="checkbox" checked={form.destaque} onChange={(e) => setForm({ ...form, destaque: e.target.checked })} className="accent-marguerite" />
               Em destaque
             </label>
             <label className="flex items-center gap-2 text-sm text-ivory cursor-pointer">
-              <input type="checkbox" checked={form.ativo} onChange={(e) => setForm({ ...form, ativo: e.target.checked })} className="accent-champagne" />
+              <input type="checkbox" checked={form.ativo} onChange={(e) => setForm({ ...form, ativo: e.target.checked })} className="accent-marguerite" />
               Ativo
             </label>
           </div>
@@ -283,7 +283,7 @@ function Input({ label, value, onChange, type = "text" }: { label: string; value
   return (
     <div>
       <label className="eyebrow block mb-2">{label}</label>
-      <input type={type} value={value} onChange={(e) => onChange(e.target.value)} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-2.5 text-sm text-ivory focus:outline-none focus:border-champagne" />
+      <input type={type} value={value} onChange={(e) => onChange(e.target.value)} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-2.5 text-sm text-ivory focus:outline-none focus:border-marguerite" />
     </div>
   );
 }
@@ -291,7 +291,7 @@ function Textarea({ label, value, onChange }: { label: string; value: string; on
   return (
     <div>
       <label className="eyebrow block mb-2">{label}</label>
-      <textarea rows={3} value={value} onChange={(e) => onChange(e.target.value)} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-2.5 text-sm text-ivory focus:outline-none focus:border-champagne resize-none" />
+      <textarea rows={3} value={value} onChange={(e) => onChange(e.target.value)} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-2.5 text-sm text-ivory focus:outline-none focus:border-marguerite resize-none" />
     </div>
   );
 }

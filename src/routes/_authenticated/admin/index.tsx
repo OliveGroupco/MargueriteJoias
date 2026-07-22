@@ -80,10 +80,10 @@ function Dashboard() {
 
 function Stat({ icon: Icon, label, value, accent }: { icon: typeof Package; label: string; value: number | string; accent?: boolean }) {
   return (
-    <div className={`p-6 rounded-sm border ${accent ? "border-champagne/60 bg-champagne/5" : "border-border/60 bg-card/30"}`}>
+    <div className={`p-6 rounded-sm border ${accent ? "border-marguerite/60 bg-marguerite/5" : "border-border/60 bg-card/30"}`}>
       <div className="flex items-center justify-between mb-4">
         <div className="eyebrow">{label}</div>
-        <Icon className={`h-4 w-4 ${accent ? "text-champagne" : "text-muted-foreground"}`} />
+        <Icon className={`h-4 w-4 ${accent ? "text-marguerite" : "text-muted-foreground"}`} />
       </div>
       <div className="font-display text-3xl text-ivory">{value}</div>
     </div>

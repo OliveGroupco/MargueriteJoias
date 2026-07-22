@@ -21,7 +21,7 @@ export const Route = createFileRoute("/_authenticated/admin")({
   },
   pendingComponent: () => (
     <div className="grid min-h-[60vh] place-items-center">
-      <Loader2 className="h-6 w-6 animate-spin text-champagne" />
+      <Loader2 className="h-6 w-6 animate-spin text-marguerite" />
     </div>
   ),
   component: AdminLayout,
@@ -54,11 +54,11 @@ function AdminLayout() {
     <div className="min-h-screen grid lg:grid-cols-[260px_1fr]">
       <aside className="border-r border-border/60 bg-onyx-soft/40 p-6 lg:sticky lg:top-0 lg:h-screen flex flex-col">
         <Link to="/admin" className="flex items-center gap-3 mb-10">
-          <span className="grid h-11 w-11 place-items-center rounded-full border border-champagne/50 font-display text-2xl text-gradient-champagne">
+          <span className="grid h-11 w-11 place-items-center rounded-full border border-marguerite/50 font-display text-2xl text-gradient-marguerite">
             C
           </span>
           <div>
-            <div className="font-display text-lg text-ivory leading-none">Cintilare</div>
+            <div className="font-display text-lg text-ivory leading-none">Marguerite Jóias</div>
             <div className="eyebrow mt-1 text-[0.6rem]">Admin</div>
           </div>
         </Link>
@@ -73,7 +73,7 @@ function AdminLayout() {
                 key={n.to}
                 to={n.to}
                 className={`flex items-center gap-3 rounded-sm px-3 py-2.5 text-sm transition ${
-                  active ? "bg-champagne/10 text-champagne" : "text-ivory/70 hover:bg-onyx-soft hover:text-ivory"
+                  active ? "bg-marguerite/10 text-marguerite" : "text-ivory/70 hover:bg-onyx-soft hover:text-ivory"
                 }`}
               >
                 <n.icon className="h-4 w-4" />
@@ -87,7 +87,7 @@ function AdminLayout() {
           <Link
             to="/"
             target="_blank"
-            className="flex items-center gap-2 text-xs text-muted-foreground hover:text-champagne"
+            className="flex items-center gap-2 text-xs text-muted-foreground hover:text-marguerite"
           >
             <ExternalLink className="h-3 w-3" /> Ver loja
           </Link>

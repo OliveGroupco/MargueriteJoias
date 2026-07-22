@@ -78,7 +78,7 @@ function CuponsAdmin() {
       <div className="grid lg:grid-cols-[1fr_360px] gap-8">
         <div>
           {isLoading ? (
-            <div className="grid place-items-center py-20"><Loader2 className="h-6 w-6 animate-spin text-champagne" /></div>
+            <div className="grid place-items-center py-20"><Loader2 className="h-6 w-6 animate-spin text-marguerite" /></div>
           ) : !data || data.length === 0 ? (
             <div className="p-16 border border-border/60 rounded-sm bg-card/30 text-center text-muted-foreground">
               Nenhum cupom.
@@ -89,8 +89,8 @@ function CuponsAdmin() {
                 <div key={c.id} className="flex items-center justify-between gap-4 p-4 border border-border/60 rounded-sm bg-card/30">
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-3">
-                      <span className="font-mono text-champagne text-lg">{c.codigo}</span>
-                      <span className="text-xs px-2 py-0.5 rounded-sm bg-champagne/15 text-champagne">
+                      <span className="font-mono text-marguerite text-lg">{c.codigo}</span>
+                      <span className="text-xs px-2 py-0.5 rounded-sm bg-marguerite/15 text-marguerite">
                         {c.desconto_percent}% OFF
                       </span>
                     </div>
@@ -98,7 +98,7 @@ function CuponsAdmin() {
                     {c.validade && <div className="text-xs text-muted-foreground mt-1">Válido até {new Date(c.validade).toLocaleDateString("pt-BR")}</div>}
                   </div>
                   <label className="flex items-center gap-2 text-xs text-ivory cursor-pointer">
-                    <input type="checkbox" checked={c.ativo} onChange={(e) => toggle.mutate({ id: c.id, ativo: e.target.checked })} className="accent-champagne" />
+                    <input type="checkbox" checked={c.ativo} onChange={(e) => toggle.mutate({ id: c.id, ativo: e.target.checked })} className="accent-marguerite" />
                     Ativo
                   </label>
                   <button
@@ -117,19 +117,19 @@ function CuponsAdmin() {
           <h2 className="font-display text-xl text-ivory">Novo cupom</h2>
           <div>
             <label className="eyebrow block mb-2">Código</label>
-            <input value={form.codigo} onChange={(e) => setForm({ ...form, codigo: e.target.value.toUpperCase() })} placeholder="CINTILA10" className="w-full bg-onyx-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-ivory uppercase focus:outline-none focus:border-champagne" />
+            <input value={form.codigo} onChange={(e) => setForm({ ...form, codigo: e.target.value.toUpperCase() })} placeholder="CINTILA10" className="w-full bg-onyx-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-ivory uppercase focus:outline-none focus:border-marguerite" />
           </div>
           <div>
             <label className="eyebrow block mb-2">Descrição</label>
-            <input value={form.descricao} onChange={(e) => setForm({ ...form, descricao: e.target.value })} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-ivory focus:outline-none focus:border-champagne" />
+            <input value={form.descricao} onChange={(e) => setForm({ ...form, descricao: e.target.value })} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-ivory focus:outline-none focus:border-marguerite" />
           </div>
           <div>
             <label className="eyebrow block mb-2">Desconto (%)</label>
-            <input type="number" min={1} max={100} value={form.desconto_percent} onChange={(e) => setForm({ ...form, desconto_percent: Number(e.target.value) })} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-ivory focus:outline-none focus:border-champagne" />
+            <input type="number" min={1} max={100} value={form.desconto_percent} onChange={(e) => setForm({ ...form, desconto_percent: Number(e.target.value) })} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-ivory focus:outline-none focus:border-marguerite" />
           </div>
           <div>
             <label className="eyebrow block mb-2">Validade</label>
-            <input type="date" value={form.validade} onChange={(e) => setForm({ ...form, validade: e.target.value })} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-ivory focus:outline-none focus:border-champagne" />
+            <input type="date" value={form.validade} onChange={(e) => setForm({ ...form, validade: e.target.value })} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-ivory focus:outline-none focus:border-marguerite" />
           </div>
           <button onClick={() => form.codigo.trim() && create.mutate()} disabled={!form.codigo.trim() || create.isPending} className="btn-luxe btn-luxe-hover w-full disabled:opacity-50">
             <Plus className="h-4 w-4" /> Criar Cupom

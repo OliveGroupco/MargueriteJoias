@@ -7,11 +7,11 @@ export function Footer() {
       <div className="container-luxe py-16 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-3">
-            <span className="grid h-12 w-12 place-items-center rounded-full border border-champagne/50 font-display text-2xl text-gradient-champagne">
-              C
+            <span className="grid h-12 w-12 place-items-center rounded-full bg-marguerite border border-marguerite-deep font-display text-2xl text-ivory">
+              M
             </span>
             <div>
-              <div className="font-display text-2xl tracking-wider text-ivory">CINTILARE</div>
+              <div className="font-display text-2xl tracking-wider text-ivory">MARGUERITE</div>
               <div className="eyebrow mt-1">Joias de Prata 925</div>
             </div>
           </div>
@@ -28,7 +28,7 @@ export function Footer() {
               <a
                 key={i}
                 href={href}
-                className="grid h-10 w-10 place-items-center rounded-full border border-border hover:border-champagne hover:text-champagne text-ivory/70 transition"
+                className="grid h-10 w-10 place-items-center rounded-full border border-border hover:border-marguerite hover:text-marguerite text-ivory/70 transition"
               >
                 <Icon className="h-4 w-4" />
               </a>
@@ -39,10 +39,10 @@ export function Footer() {
         <div>
           <div className="eyebrow mb-5">Navegação</div>
           <ul className="space-y-3 text-sm text-ivory/80">
-            <li><Link to="/" className="hover:text-champagne">Início</Link></li>
-            <li><Link to="/catalogo" className="hover:text-champagne">Catálogo</Link></li>
-            <li><Link to="/sobre" className="hover:text-champagne">Sobre</Link></li>
-            <li><Link to="/contato" className="hover:text-champagne">Contato</Link></li>
+            <li><Link to="/" className="hover:text-marguerite">Início</Link></li>
+            <li><Link to="/catalogo" className="hover:text-marguerite">Catálogo</Link></li>
+            <li><Link to="/sobre" className="hover:text-marguerite">Sobre</Link></li>
+            <li><Link to="/contato" className="hover:text-marguerite">Contato</Link></li>
           </ul>
         </div>
 
@@ -58,7 +58,7 @@ export function Footer() {
       </div>
       <div className="border-t border-border/40">
         <div className="container-luxe py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <span>© {new Date().getFullYear()} Cintilare. Todos os direitos reservados.</span>
+          <span>© {new Date().getFullYear()} Marguerite Jóias. Todos os direitos reservados.</span>
           <span className="tracking-[0.2em] uppercase">Feito com requinte em prata 925</span>
         </div>
       </div>

@@ -30,8 +30,8 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-champagne: var(--champagne);
-  --color-champagne-deep: var(--champagne-deep);
+  --color-marguerite: var(--marguerite);
+  --color-marguerite-deep: var(--marguerite-deep);
   --color-onyx: var(--onyx);
   --color-ivory: var(--ivory);
 }
@@ -39,11 +39,11 @@
 :root {
   --radius: 0.25rem;
 
-  /* Onyx & Champagne palette */
+  /* Onyx & Marguerite palette */
   --onyx: oklch(0.16 0.005 60);          /* #0E0E10 */
   --onyx-soft: oklch(0.22 0.012 60);     /* #1F1B16 */
-  --champagne: oklch(0.84 0.06 80);      /* #D9C2A0 */
-  --champagne-deep: oklch(0.6 0.07 70);  /* #8C6F4B */
+  --marguerite: oklch(0.65 0.18 45);      /* #D36E35 Light/Base */
+  --marguerite-deep: oklch(0.55 0.16 45);  /* #B25A2A Deep */
   --ivory: oklch(0.96 0.012 80);         /* #F2EADF */
 
   --background: var(--onyx);
@@ -52,24 +52,24 @@
   --card-foreground: var(--ivory);
   --popover: oklch(0.2 0.008 60);
   --popover-foreground: var(--ivory);
-  --primary: var(--champagne);
-  --primary-foreground: var(--onyx);
+  --primary: var(--marguerite);
+  --primary-foreground: var(--ivory);
   --secondary: oklch(0.26 0.012 60);
   --secondary-foreground: var(--ivory);
   --muted: oklch(0.24 0.01 60);
   --muted-foreground: oklch(0.7 0.02 70);
-  --accent: var(--champagne-deep);
+  --accent: var(--marguerite-deep);
   --accent-foreground: var(--ivory);
   --destructive: oklch(0.55 0.2 25);
   --destructive-foreground: var(--ivory);
   --border: oklch(0.32 0.012 65 / 60%);
   --input: oklch(0.3 0.012 65);
-  --ring: var(--champagne);
+  --ring: var(--marguerite);
 
   --gradient-luxe: linear-gradient(135deg, oklch(0.16 0.005 60) 0%, oklch(0.22 0.012 60) 50%, oklch(0.18 0.01 65) 100%);
-  --gradient-champagne: linear-gradient(135deg, var(--champagne) 0%, var(--champagne-deep) 100%);
+  --gradient-marguerite: linear-gradient(135deg, var(--marguerite) 0%, var(--marguerite-deep) 100%);
   --shadow-luxe: 0 30px 60px -20px oklch(0 0 0 / 60%), 0 0 0 1px oklch(0.4 0.03 70 / 20%);
-  --shadow-glow: 0 0 40px -10px var(--champagne);
+  --shadow-glow: 0 0 40px -10px var(--marguerite);
 }
 
 @layer base {
@@ -87,7 +87,7 @@
     font-weight: 400;
     letter-spacing: -0.01em;
   }
-  ::selection { background: var(--champagne); color: var(--onyx); }
+  ::selection { background: var(--marguerite); color: var(--ivory); }
 }
 
 @utility container-luxe {
@@ -97,8 +97,8 @@
   padding-inline: 1.5rem;
 }
 
-@utility text-gradient-champagne {
-  background: var(--gradient-champagne);
+@utility text-gradient-marguerite {
+  background: var(--gradient-marguerite);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -111,7 +111,7 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.875rem 2rem;
-  background: var(--gradient-champagne);
+  background: var(--gradient-marguerite);
   color: var(--onyx);
   font-size: 0.75rem;
   font-weight: 600;
@@ -132,8 +132,8 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.875rem 2rem;
-  border: 1px solid var(--champagne);
-  color: var(--champagne);
+  border: 1px solid var(--marguerite);
+  color: var(--marguerite);
   background: transparent;
   font-size: 0.75rem;
   font-weight: 500;
@@ -141,20 +141,20 @@
   text-transform: uppercase;
   border-radius: 2px;
   transition: all 0.3s ease;
-  &:hover { background: var(--champagne); color: var(--onyx); }
+  &:hover { background: var(--marguerite); color: var(--onyx); }
 }
 
 @utility eyebrow {
   font-size: 0.7rem;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: var(--champagne);
+  color: var(--marguerite);
   font-weight: 500;
 }
 
 @utility hairline {
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--champagne-deep), transparent);
+  background: linear-gradient(90deg, transparent, var(--marguerite-deep), transparent);
 }
 
 @keyframes fadeUp {

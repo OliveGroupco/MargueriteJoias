@@ -4,8 +4,8 @@ import { Award, Gem, HeartHandshake } from "lucide-react";
 export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
-      { title: "Sobre · Cintilare" },
-      { name: "description", content: "Conheça a Cintilare: joalheria contemporânea em prata 925, com tradição artesanal e design refinado." },
+      { title: "Sobre · Marguerite Jóias" },
+      { name: "description", content: "Conheça a Marguerite Jóias: joalheria contemporânea em prata 925, com tradição artesanal e design refinado." },
     ],
   }),
   component: Sobre,
@@ -26,10 +26,10 @@ function Sobre() {
         <div className="container-luxe relative py-32 text-center">
           <div className="eyebrow mb-4">Nossa História</div>
           <h1 className="font-display text-5xl md:text-7xl text-ivory max-w-3xl mx-auto leading-[1.05]">
-            Uma marca nascida do <em className="text-gradient-champagne not-italic">brilho</em>
+            Uma marca nascida do <em className="text-gradient-marguerite not-italic">brilho</em>
           </h1>
           <p className="mt-6 max-w-2xl mx-auto text-ivory/80">
-            Cintilare é a tradução do desejo por peças que ultrapassem tendências —
+            Marguerite Jóias é a tradução do desejo por peças que ultrapassem tendências —
             joias que se tornam herança.
           </p>
         </div>
@@ -43,7 +43,7 @@ function Sobre() {
           </h2>
           <div className="mt-8 space-y-5 text-ivory/80 leading-relaxed">
             <p>
-              Fundada em Goiânia, a Cintilare nasceu da paixão por joalheria autoral.
+              Fundada em Goiânia, a Marguerite Jóias nasceu da paixão por joalheria autoral.
               Cada peça é desenhada no ateliê e produzida em pequenas séries por
               ourives experientes que dominam técnicas centenárias.
             </p>
@@ -57,7 +57,7 @@ function Sobre() {
         <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
           <img
             src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=900&q=80"
-            alt="Ateliê Cintilare"
+            alt="Ateliê Marguerite Jóias"
             className="h-full w-full object-cover"
           />
         </div>
@@ -76,7 +76,7 @@ function Sobre() {
               { icon: HeartHandshake, t: "Valores", d: "Artesania, transparência, qualidade certificada e relacionamento próximo com cada cliente." },
             ].map(({ icon: Icon, t, d }) => (
               <div key={t} className="text-center p-8 border border-border/60 rounded-sm bg-card/40">
-                <div className="grid h-14 w-14 mx-auto place-items-center rounded-full border border-champagne/40 text-champagne mb-5">
+                <div className="grid h-14 w-14 mx-auto place-items-center rounded-full border border-marguerite/40 text-marguerite mb-5">
                   <Icon className="h-6 w-6" />
                 </div>
                 <div className="font-display text-2xl text-ivory">{t}</div>

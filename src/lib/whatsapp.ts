@@ -5,5 +5,5 @@ export function whatsappLink(message: string) {
 }
 
 export function whatsappProductMessage(productName: string) {
-  return `Olá Cintilare! Tenho interesse na peça: ${productName}. Pode me ajudar?`;
+  return `Olá Marguerite Jóias! Tenho interesse na peça: ${productName}. Pode me ajudar?`;
 }

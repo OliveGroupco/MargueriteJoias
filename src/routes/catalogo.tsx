@@ -8,8 +8,8 @@ import { ProductCard } from "@/components/site/ProductCard";
 export const Route = createFileRoute("/catalogo")({
   head: () => ({
     meta: [
-      { title: "Catálogo · Cintilare" },
-      { name: "description", content: "Explore o catálogo completo Cintilare: anéis, colares, brincos e pulseiras em prata 925." },
+      { title: "Catálogo · Marguerite Jóias" },
+      { name: "description", content: "Explore o catálogo completo Marguerite Jóias: anéis, colares, brincos e pulseiras em prata 925." },
     ],
   }),
   component: Catalogo,
@@ -58,7 +58,7 @@ function Catalogo() {
               value={q}
               onChange={(e) => setQ(e.target.value)}
               placeholder="Buscar peça..."
-              className="w-full pl-10 pr-3 py-3 bg-onyx-soft/40 border border-border rounded-sm text-sm text-ivory placeholder:text-muted-foreground focus:outline-none focus:border-champagne transition"
+              className="w-full pl-10 pr-3 py-3 bg-onyx-soft/40 border border-border rounded-sm text-sm text-ivory placeholder:text-muted-foreground focus:outline-none focus:border-marguerite transition"
             />
           </div>
 
@@ -70,7 +70,7 @@ function Catalogo() {
                   key={c.id}
                   onClick={() => setCat(c.id)}
                   className={`block w-full text-left text-sm py-2 transition ${
-                    cat === c.id ? "text-champagne" : "text-ivory/70 hover:text-ivory"
+                    cat === c.id ? "text-marguerite" : "text-ivory/70 hover:text-ivory"
                   }`}
                 >
                   {c.label}
@@ -88,7 +88,7 @@ function Catalogo() {
               step={50}
               value={max}
               onChange={(e) => setMax(Number(e.target.value))}
-              className="w-full accent-champagne"
+              className="w-full accent-marguerite"
             />
             <div className="mt-2 text-sm text-ivory">{formatBRL(max)}</div>
           </div>
@@ -103,7 +103,7 @@ function Catalogo() {
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value as Sort)}
-              className="bg-onyx-soft/40 border border-border rounded-sm text-sm text-ivory px-3 py-2 focus:outline-none focus:border-champagne"
+              className="bg-onyx-soft/40 border border-border rounded-sm text-sm text-ivory px-3 py-2 focus:outline-none focus:border-marguerite"
             >
               <option value="relevancia">Relevância</option>
               <option value="novos">Lançamentos</option>
@@ -114,11 +114,11 @@ function Catalogo() {
 
           {isLoading ? (
             <div className="grid place-items-center py-20">
-              <Loader2 className="h-8 w-8 animate-spin text-champagne" />
+              <Loader2 className="h-8 w-8 animate-spin text-marguerite" />
             </div>
           ) : filtered.length === 0 ? (
             <div className="py-20 text-center text-muted-foreground">
-              Nenhuma peça encontrada. <button onClick={() => {setQ(''); setCat('todas'); setMax(1000); setSort('relevancia')}} className="text-champagne underline">Limpar filtros</button>
+              Nenhuma peça encontrada. <button onClick={() => {setQ(''); setCat('todas'); setMax(1000); setSort('relevancia')}} className="text-marguerite underline">Limpar filtros</button>
             </div>
           ) : (
             <div className="grid gap-x-6 gap-y-12 grid-cols-2 md:grid-cols-3">

@@ -8,7 +8,7 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/checkout")({
-  head: () => ({ meta: [{ title: "Checkout · Cintilare" }] }),
+  head: () => ({ meta: [{ title: "Checkout · Marguerite Jóias" }] }),
   component: Checkout,
 });
 
@@ -121,7 +121,7 @@ ${endereco}`;
   if (sent) {
     return (
       <div className="container-luxe py-32 text-center max-w-xl mx-auto">
-        <div className="grid h-20 w-20 mx-auto place-items-center rounded-full bg-gradient-to-br from-champagne to-champagne-deep text-onyx mb-6">
+        <div className="grid h-20 w-20 mx-auto place-items-center rounded-full bg-gradient-to-br from-marguerite to-marguerite-deep text-onyx mb-6">
           <CheckCircle2 className="h-10 w-10" />
         </div>
         <h1 className="font-display text-4xl text-ivory">Pedido enviado!</h1>
@@ -190,7 +190,7 @@ ${endereco}`;
                   value={coupon}
                   onChange={(e) => setCoupon(e.target.value)}
                   placeholder="CINTILA10"
-                  className="w-full pl-10 pr-3 py-3 bg-onyx-soft/40 border border-border rounded-sm text-ivory focus:outline-none focus:border-champagne uppercase"
+                  className="w-full pl-10 pr-3 py-3 bg-onyx-soft/40 border border-border rounded-sm text-ivory focus:outline-none focus:border-marguerite uppercase"
                 />
               </div>
               <button type="button" onClick={applyCoupon} className="btn-outline-luxe">Aplicar</button>
@@ -218,7 +218,7 @@ ${endereco}`;
           <div className="space-y-2 text-sm">
             <div className="flex justify-between text-ivory/80"><span>Subtotal</span><span>{formatBRL(subtotal)}</span></div>
             {discount > 0 && (
-              <div className="flex justify-between text-champagne"><span>Desconto</span><span>-{formatBRL(discount)}</span></div>
+              <div className="flex justify-between text-marguerite"><span>Desconto</span><span>-{formatBRL(discount)}</span></div>
             )}
             <div className="flex justify-between text-ivory/80">
               <span>Frete</span>
@@ -228,7 +228,7 @@ ${endereco}`;
           <div className="hairline" />
           <div className="flex justify-between items-baseline">
             <span className="text-ivory">Total</span>
-            <span className="font-display text-3xl text-gradient-champagne">{formatBRL(total)}</span>
+            <span className="font-display text-3xl text-gradient-marguerite">{formatBRL(total)}</span>
           </div>
           <button type="submit" className="btn-luxe btn-luxe-hover w-full">
             <MessageCircle className="h-4 w-4" /> Enviar pedido via WhatsApp
@@ -257,7 +257,7 @@ function Field({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-3 text-ivory text-sm focus:outline-none focus:border-champagne"
+        className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-3 text-ivory text-sm focus:outline-none focus:border-marguerite"
       />
     </div>
   );

@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import { Loader2, ArrowLeft } from "lucide-react";
 
 export const Route = createFileRoute("/auth")({
-  head: () => ({ meta: [{ title: "Acesso · Cintilare" }, { name: "robots", content: "noindex" }] }),
+  head: () => ({ meta: [{ title: "Acesso · Marguerite Jóias" }, { name: "robots", content: "noindex" }] }),
   component: AuthPage,
 });
 
@@ -78,12 +78,12 @@ function AuthPage() {
   return (
     <div className="min-h-[90vh] grid place-items-center px-6 py-16">
       <div className="w-full max-w-md">
-        <Link to="/" className="inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-muted-foreground hover:text-champagne mb-10">
+        <Link to="/" className="inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-muted-foreground hover:text-marguerite mb-10">
           <ArrowLeft className="h-3 w-3" /> Voltar
         </Link>
 
         <div className="text-center mb-10">
-          <span className="grid h-16 w-16 mx-auto place-items-center rounded-full border border-champagne/50 font-display text-3xl text-gradient-champagne mb-5">
+          <span className="grid h-16 w-16 mx-auto place-items-center rounded-full border border-marguerite/50 font-display text-3xl text-gradient-marguerite mb-5">
             C
           </span>
           <h1 className="font-display text-4xl text-ivory">
@@ -104,7 +104,7 @@ function AuthPage() {
 
           {mode === "login" && (
             <div className="flex justify-end">
-              <button type="button" onClick={() => setMode("forgot")} className="text-xs text-champagne hover:underline">
+              <button type="button" onClick={() => setMode("forgot")} className="text-xs text-marguerite hover:underline">
                 Esqueci minha senha
               </button>
             </div>
@@ -139,7 +139,7 @@ function Field({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         required
-        className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-3 text-ivory focus:outline-none focus:border-champagne"
+        className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-3 text-ivory focus:outline-none focus:border-marguerite"
       />
     </div>
   );

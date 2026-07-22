@@ -18,9 +18,9 @@ export const Route = createFileRoute("/produto/$slug")({
   head: ({ loaderData }) => ({
     meta: loaderData
       ? [
-          { title: `${loaderData.product.name} · Cintilare` },
+          { title: `${loaderData.product.name} · Marguerite Jóias` },
           { name: "description", content: loaderData.product.description },
-          { property: "og:title", content: `${loaderData.product.name} · Cintilare` },
+          { property: "og:title", content: `${loaderData.product.name} · Marguerite Jóias` },
           { property: "og:description", content: loaderData.product.description },
           { property: "og:image", content: loaderData.product.images[0] },
         ]
@@ -59,9 +59,9 @@ function ProductPage() {
   return (
     <div className="container-luxe py-12">
       <nav className="text-xs text-muted-foreground mb-8">
-        <Link to="/" className="hover:text-champagne">Início</Link>
+        <Link to="/" className="hover:text-marguerite">Início</Link>
         <span className="mx-2">/</span>
-        <Link to="/catalogo" className="hover:text-champagne">Catálogo</Link>
+        <Link to="/catalogo" className="hover:text-marguerite">Catálogo</Link>
         <span className="mx-2">/</span>
         <span className="text-ivory">{product.name}</span>
       </nav>
@@ -95,7 +95,7 @@ function ProductPage() {
                   key={i}
                   onClick={() => setActive(i)}
                   className={`aspect-square overflow-hidden rounded-sm border transition ${
-                    active === i ? "border-champagne" : "border-border hover:border-champagne/60"
+                    active === i ? "border-marguerite" : "border-border hover:border-marguerite/60"
                   }`}
                 >
                   <img src={img} alt="" className="h-full w-full object-cover" />
@@ -111,7 +111,7 @@ function ProductPage() {
           <h1 className="font-display text-4xl md:text-5xl text-ivory mt-3">{product.name}</h1>
 
           <div className="flex items-center gap-3 mt-4">
-            <div className="flex gap-0.5 text-champagne">
+            <div className="flex gap-0.5 text-marguerite">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star key={i} className={`h-4 w-4 ${i < Math.round(product.rating) ? "fill-current" : ""}`} />
               ))}
@@ -122,7 +122,7 @@ function ProductPage() {
           </div>
 
           <div className="mt-8 flex items-baseline gap-3">
-            <span className="font-display text-4xl text-gradient-champagne">{formatBRL(product.price)}</span>
+            <span className="font-display text-4xl text-gradient-marguerite">{formatBRL(product.price)}</span>
             {product.oldPrice && (
               <span className="text-base text-muted-foreground line-through">{formatBRL(product.oldPrice)}</span>
             )}
@@ -139,7 +139,7 @@ function ProductPage() {
             <div className="eyebrow">Especificações</div>
             {product.details.map((d) => (
               <div key={d} className="flex items-start gap-3 text-sm text-ivory/80">
-                <Check className="h-4 w-4 text-champagne shrink-0 mt-0.5" />
+                <Check className="h-4 w-4 text-marguerite shrink-0 mt-0.5" />
                 <span>{d}</span>
               </div>
             ))}
@@ -149,14 +149,14 @@ function ProductPage() {
             <div className="flex items-center border border-border rounded-sm">
               <button
                 onClick={() => setQty((q) => Math.max(1, q - 1))}
-                className="grid h-12 w-12 place-items-center text-ivory hover:text-champagne"
+                className="grid h-12 w-12 place-items-center text-ivory hover:text-marguerite"
               >
                 <Minus className="h-4 w-4" />
               </button>
               <span className="w-12 text-center text-ivory">{qty}</span>
               <button
                 onClick={() => setQty((q) => Math.min(product.stock, q + 1))}
-                className="grid h-12 w-12 place-items-center text-ivory hover:text-champagne"
+                className="grid h-12 w-12 place-items-center text-ivory hover:text-marguerite"
               >
                 <Plus className="h-4 w-4" />
               </button>
@@ -189,7 +189,7 @@ function ProductPage() {
               <div className="eyebrow mb-3">Você também vai amar</div>
               <h2 className="font-display text-3xl md:text-4xl text-ivory">Peças semelhantes</h2>
             </div>
-            <Link to="/catalogo" className="hidden md:inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-champagne hover:gap-3 transition-all">
+            <Link to="/catalogo" className="hidden md:inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-marguerite hover:gap-3 transition-all">
               Ver mais <ArrowRight className="h-3 w-3" />
             </Link>
           </div>
