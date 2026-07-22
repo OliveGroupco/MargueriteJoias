@@ -95,9 +95,17 @@ function Home() {
             const img = products.find((p) => p.category === cat.id)?.images[0];
             return (
               <Link
-              <Link key={cat.id} to="/catalogo" search={{ category: cat.id }} className="group block relative overflow-hidden rounded-sm aspect-[4/5]">
-                <img src={cat.image} alt={cat.label} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" />
-                <div className="absolute inset-0 bg-gradient-to-t from-ivory via-ivory/40 to-transparent" />
+                key={cat.id}
+                to="/catalogo"
+                search={{ category: cat.id } as never}
+                className="group block relative overflow-hidden rounded-sm aspect-[4/5]"
+              >
+                <img
+                  src={img}
+                  alt={cat.label}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ivory via-ivory/80 to-ivory/0" />
                 <div className="absolute inset-0 p-8 flex flex-col justify-end">
                   <div className="font-display text-2xl text-onyx">{cat.label}</div>
                   <div className="text-xs text-marguerite mt-1 tracking-[0.2em] uppercase">

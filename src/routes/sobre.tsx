@@ -17,11 +17,11 @@ function Sobre() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=1920&q=80"
             alt=""
-            className="h-full w-full object-cover opacity-25"
+            className="h-full w-full object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-onyx via-onyx/70 to-onyx" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ivory via-ivory/70 to-ivory" />
         </div>
         <div className="container-luxe relative py-32 text-center">
           <div className="eyebrow mb-4">Nossa História</div>
