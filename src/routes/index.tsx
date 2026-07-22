@@ -101,7 +101,7 @@ function Home() {
                 className="group block relative overflow-hidden rounded-sm aspect-[4/5]"
               >
                 <img
-                  src={img}
+                  src={img || cat.image}
                   alt={cat.label}
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90"
                 />

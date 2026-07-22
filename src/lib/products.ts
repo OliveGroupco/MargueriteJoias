@@ -17,10 +17,10 @@ export type Product = {
 };
 
 export const categories = [
-  { id: "aneis", label: "Anéis", description: "Peças que celebram momentos" },
-  { id: "colares", label: "Colares", description: "Elegância em cada detalhe" },
-  { id: "brincos", label: "Brincos", description: "Brilho ao seu redor" },
-  { id: "pulseiras", label: "Pulseiras", description: "Acentos refinados" },
+  { id: "aneis", label: "Anéis", description: "Peças que celebram momentos", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80" },
+  { id: "colares", label: "Colares", description: "Elegância em cada detalhe", image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80" },
+  { id: "brincos", label: "Brincos", description: "Brilho ao seu redor", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&q=80" },
+  { id: "pulseiras", label: "Pulseiras", description: "Acentos refinados", image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80" },
 ] as const;
 
 import { supabase } from "@/integrations/supabase/client";
