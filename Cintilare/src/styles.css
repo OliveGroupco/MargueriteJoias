@@ -1,0 +1,171 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-champagne: var(--champagne);
+  --color-champagne-deep: var(--champagne-deep);
+  --color-onyx: var(--onyx);
+  --color-ivory: var(--ivory);
+}
+
+:root {
+  --radius: 0.25rem;
+
+  /* Onyx & Champagne palette */
+  --onyx: oklch(0.16 0.005 60);          /* #0E0E10 */
+  --onyx-soft: oklch(0.22 0.012 60);     /* #1F1B16 */
+  --champagne: oklch(0.84 0.06 80);      /* #D9C2A0 */
+  --champagne-deep: oklch(0.6 0.07 70);  /* #8C6F4B */
+  --ivory: oklch(0.96 0.012 80);         /* #F2EADF */
+
+  --background: var(--onyx);
+  --foreground: var(--ivory);
+  --card: oklch(0.2 0.008 60);
+  --card-foreground: var(--ivory);
+  --popover: oklch(0.2 0.008 60);
+  --popover-foreground: var(--ivory);
+  --primary: var(--champagne);
+  --primary-foreground: var(--onyx);
+  --secondary: oklch(0.26 0.012 60);
+  --secondary-foreground: var(--ivory);
+  --muted: oklch(0.24 0.01 60);
+  --muted-foreground: oklch(0.7 0.02 70);
+  --accent: var(--champagne-deep);
+  --accent-foreground: var(--ivory);
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: var(--ivory);
+  --border: oklch(0.32 0.012 65 / 60%);
+  --input: oklch(0.3 0.012 65);
+  --ring: var(--champagne);
+
+  --gradient-luxe: linear-gradient(135deg, oklch(0.16 0.005 60) 0%, oklch(0.22 0.012 60) 50%, oklch(0.18 0.01 65) 100%);
+  --gradient-champagne: linear-gradient(135deg, var(--champagne) 0%, var(--champagne-deep) 100%);
+  --shadow-luxe: 0 30px 60px -20px oklch(0 0 0 / 60%), 0 0 0 1px oklch(0.4 0.03 70 / 20%);
+  --shadow-glow: 0 0 40px -10px var(--champagne);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  ::selection { background: var(--champagne); color: var(--onyx); }
+}
+
+@utility container-luxe {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1280px;
+  padding-inline: 1.5rem;
+}
+
+@utility text-gradient-champagne {
+  background: var(--gradient-champagne);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+@utility btn-luxe {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: var(--gradient-champagne);
+  color: var(--onyx);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+@utility btn-luxe-hover {
+  &:hover { box-shadow: var(--shadow-glow); transform: translateY(-1px); }
+}
+
+@utility btn-outline-luxe {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  border: 1px solid var(--champagne);
+  color: var(--champagne);
+  background: transparent;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  &:hover { background: var(--champagne); color: var(--onyx); }
+}
+
+@utility eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  font-weight: 500;
+}
+
+@utility hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--champagne-deep), transparent);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@utility animate-fade-up {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
