@@ -51,7 +51,7 @@ export function Footer() {
           <ul className="space-y-3 text-sm text-onyx/80">
             <li>WhatsApp: (62) 98145-2436</li>
             <li>Seg a Sex · 9h às 18h</li>
-            <li>contato@cintilare.com</li>
+            <li>contato@margueritejoias.com</li>
             <li>Goiânia · GO</li>
           </ul>
         </div>

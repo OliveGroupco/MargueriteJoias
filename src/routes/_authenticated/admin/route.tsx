@@ -54,8 +54,8 @@ function AdminLayout() {
     <div className="min-h-screen grid lg:grid-cols-[260px_1fr]">
       <aside className="border-r border-border/60 bg-ivory-soft/40 p-6 lg:sticky lg:top-0 lg:h-screen flex flex-col">
         <Link to="/admin" className="flex items-center gap-3 mb-10">
-          <span className="grid h-11 w-11 place-items-center rounded-full border border-marguerite/50 font-display text-2xl text-gradient-marguerite">
-            C
+          <span className="grid h-11 w-11 place-items-center rounded-full bg-marguerite border border-marguerite-deep font-display text-2xl text-ivory">
+            M
           </span>
           <div>
             <div className="font-display text-lg text-onyx leading-none">Marguerite Jóias</div>

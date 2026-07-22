@@ -27,11 +27,11 @@ function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=1920&q=80"
             alt=""
-            className="h-full w-full object-cover opacity-30"
+            className="h-full w-full object-cover opacity-60"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-onyx via-onyx/80 to-onyx/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-ivory via-ivory/80 to-ivory/40" />
         </div>
         <div className="container-luxe relative grid min-h-[85vh] items-center py-24">
           <div className="max-w-2xl animate-fade-up">
@@ -95,19 +95,10 @@ function Home() {
             const img = products.find((p) => p.category === cat.id)?.images[0];
             return (
               <Link
-                key={cat.id}
-                to="/catalogo"
-                search={{ cat: cat.id } as never}
-                className="group relative aspect-[3/4] overflow-hidden rounded-sm"
-                style={{ animationDelay: `${idx * 80}ms` }}
-              >
-                <img
-                  src={img}
-                  alt={cat.label}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.4s] group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-onyx via-onyx/40 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-6">
+              <Link key={cat.id} to="/catalogo" search={{ category: cat.id }} className="group block relative overflow-hidden rounded-sm aspect-[4/5]">
+                <img src={cat.image} alt={cat.label} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ivory via-ivory/40 to-transparent" />
+                <div className="absolute inset-0 p-8 flex flex-col justify-end">
                   <div className="font-display text-2xl text-onyx">{cat.label}</div>
                   <div className="text-xs text-marguerite mt-1 tracking-[0.2em] uppercase">
                     {cat.description}

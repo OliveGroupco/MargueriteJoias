@@ -3,7 +3,7 @@ import type { Product } from "./products";
 
 export type CartItem = { product: Product; qty: number };
 
-const KEY = "cintilare:cart";
+const KEY = "marguerite:cart";
 let items: CartItem[] = load();
 const listeners = new Set<() => void>();
 

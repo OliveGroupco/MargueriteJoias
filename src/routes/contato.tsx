@@ -78,7 +78,7 @@ function Contato() {
         <div className="space-y-6">
           {[
             { icon: MessageCircle, t: "WhatsApp", d: "(62) 98145-2436", href: whatsappLink("Olá Marguerite Jóias!") },
-            { icon: Mail, t: "E-mail", d: "contato@cintilare.com", href: "mailto:contato@cintilare.com" },
+            { icon: Mail, t: "E-mail", d: "contato@margueritejoias.com", href: "mailto:contato@margueritejoias.com" },
             { icon: MapPin, t: "Endereço", d: "Goiânia · GO · Brasil" },
             { icon: Clock, t: "Horário", d: "Seg a Sex · 9h às 18h" },
           ].map(({ icon: Icon, t, d, href }) => {

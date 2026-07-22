@@ -83,8 +83,8 @@ function AuthPage() {
         </Link>
 
         <div className="text-center mb-10">
-          <span className="grid h-16 w-16 mx-auto place-items-center rounded-full border border-marguerite/50 font-display text-3xl text-gradient-marguerite mb-5">
-            C
+          <span className="grid h-16 w-16 mx-auto place-items-center rounded-full bg-marguerite border border-marguerite-deep font-display text-3xl text-ivory mb-5">
+            M
           </span>
           <h1 className="font-display text-4xl text-onyx">
             {mode === "login" ? "Acesso Administrativo" : mode === "forgot" ? "Recuperar Senha" : "Nova Senha"}
