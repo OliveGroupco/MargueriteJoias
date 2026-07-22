@@ -27,11 +27,11 @@ function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=1920&q=80"
-            alt=""
-            className="h-full w-full object-cover opacity-60"
+            src="/hero-banner.png"
+            alt="Marguerite Jóias"
+            className="h-full w-full object-cover opacity-80"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-ivory via-ivory/80 to-ivory/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-ivory via-ivory/90 to-ivory/30" />
         </div>
         <div className="container-luxe relative grid min-h-[85vh] items-center py-24">
           <div className="max-w-2xl animate-fade-up">
