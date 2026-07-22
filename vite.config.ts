@@ -9,6 +9,9 @@ export default defineConfig({
     port: 8080,
     host: "::",
   },
+  build: {
+    outDir: "dist/client",
+  },
   plugins: [
     TanStackRouterVite(),
     react(),
