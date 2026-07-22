@@ -34,7 +34,7 @@ function Checkout() {
   if (items.length === 0 && !sent) {
     return (
       <div className="container-luxe py-32 text-center">
-        <h1 className="font-display text-4xl text-ivory">Carrinho vazio</h1>
+        <h1 className="font-display text-4xl text-onyx">Carrinho vazio</h1>
         <Link to="/catalogo" className="btn-outline-luxe mt-8 inline-flex">Ver catálogo</Link>
       </div>
     );
@@ -121,10 +121,10 @@ ${endereco}`;
   if (sent) {
     return (
       <div className="container-luxe py-32 text-center max-w-xl mx-auto">
-        <div className="grid h-20 w-20 mx-auto place-items-center rounded-full bg-gradient-to-br from-marguerite to-marguerite-deep text-onyx mb-6">
+        <div className="grid h-20 w-20 mx-auto place-items-center rounded-full bg-gradient-to-br from-marguerite to-marguerite-deep text-ivory mb-6">
           <CheckCircle2 className="h-10 w-10" />
         </div>
-        <h1 className="font-display text-4xl text-ivory">Pedido enviado!</h1>
+        <h1 className="font-display text-4xl text-onyx">Pedido enviado!</h1>
         <p className="mt-4 text-muted-foreground">
           Seu pedido foi encaminhado para nosso WhatsApp. Em instantes nossa equipe entrará em contato para confirmar pagamento e entrega.
         </p>
@@ -149,13 +149,13 @@ ${endereco}`;
     <div className="container-luxe py-16">
       <div className="text-center mb-12">
         <div className="eyebrow mb-3">Finalizar Pedido</div>
-        <h1 className="font-display text-5xl text-ivory">Checkout</h1>
+        <h1 className="font-display text-5xl text-onyx">Checkout</h1>
       </div>
 
       <form onSubmit={finalize} className="grid lg:grid-cols-[1fr_420px] gap-12">
         <div className="space-y-10">
           <section>
-            <h2 className="font-display text-2xl text-ivory mb-6">Dados Pessoais</h2>
+            <h2 className="font-display text-2xl text-onyx mb-6">Dados Pessoais</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               <Field label="Nome completo *" value={form.nome} onChange={(v) => setForm({ ...form, nome: v })} className="sm:col-span-2" />
               <Field label="Telefone *" value={form.telefone} onChange={(v) => setForm({ ...form, telefone: v })} placeholder="(62) 99999-9999" />
@@ -164,7 +164,7 @@ ${endereco}`;
           </section>
 
           <section>
-            <h2 className="font-display text-2xl text-ivory mb-6">Endereço de Entrega</h2>
+            <h2 className="font-display text-2xl text-onyx mb-6">Endereço de Entrega</h2>
             <div className="grid sm:grid-cols-6 gap-4">
               <Field label="CEP *" value={form.cep} onChange={(v) => setForm({ ...form, cep: v })} className="sm:col-span-2" placeholder="00000-000" />
               <div className="sm:col-span-4 flex items-end">
@@ -182,7 +182,7 @@ ${endereco}`;
           </section>
 
           <section>
-            <h2 className="font-display text-2xl text-ivory mb-6">Cupom de Desconto</h2>
+            <h2 className="font-display text-2xl text-onyx mb-6">Cupom de Desconto</h2>
             <div className="flex gap-3">
               <div className="relative flex-1">
                 <Tag className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -190,7 +190,7 @@ ${endereco}`;
                   value={coupon}
                   onChange={(e) => setCoupon(e.target.value)}
                   placeholder="CINTILA10"
-                  className="w-full pl-10 pr-3 py-3 bg-onyx-soft/40 border border-border rounded-sm text-ivory focus:outline-none focus:border-marguerite uppercase"
+                  className="w-full pl-10 pr-3 py-3 bg-ivory-soft/40 border border-border rounded-sm text-onyx focus:outline-none focus:border-marguerite uppercase"
                 />
               </div>
               <button type="button" onClick={applyCoupon} className="btn-outline-luxe">Aplicar</button>
@@ -200,34 +200,34 @@ ${endereco}`;
         </div>
 
         <aside className="h-fit lg:sticky lg:top-28 p-6 border border-border/60 rounded-sm bg-card/30 space-y-5">
-          <h2 className="font-display text-2xl text-ivory">Resumo do Pedido</h2>
+          <h2 className="font-display text-2xl text-onyx">Resumo do Pedido</h2>
           <div className="hairline" />
           <div className="space-y-3 max-h-60 overflow-auto">
             {items.map(({ product, qty }) => (
               <div key={product.id} className="flex gap-3 text-sm">
                 <img src={product.images[0]} alt="" className="h-14 w-14 object-cover rounded-sm" />
                 <div className="flex-1 min-w-0">
-                  <div className="text-ivory truncate">{product.name}</div>
+                  <div className="text-onyx truncate">{product.name}</div>
                   <div className="text-xs text-muted-foreground">Qtd: {qty}</div>
                 </div>
-                <div className="text-ivory text-sm">{formatBRL(qty * product.price)}</div>
+                <div className="text-onyx text-sm">{formatBRL(qty * product.price)}</div>
               </div>
             ))}
           </div>
           <div className="hairline" />
           <div className="space-y-2 text-sm">
-            <div className="flex justify-between text-ivory/80"><span>Subtotal</span><span>{formatBRL(subtotal)}</span></div>
+            <div className="flex justify-between text-onyx/80"><span>Subtotal</span><span>{formatBRL(subtotal)}</span></div>
             {discount > 0 && (
               <div className="flex justify-between text-marguerite"><span>Desconto</span><span>-{formatBRL(discount)}</span></div>
             )}
-            <div className="flex justify-between text-ivory/80">
+            <div className="flex justify-between text-onyx/80">
               <span>Frete</span>
               <span>{shipping === null ? "—" : shipping === 0 ? "Grátis" : formatBRL(shipping)}</span>
             </div>
           </div>
           <div className="hairline" />
           <div className="flex justify-between items-baseline">
-            <span className="text-ivory">Total</span>
+            <span className="text-onyx">Total</span>
             <span className="font-display text-3xl text-gradient-marguerite">{formatBRL(total)}</span>
           </div>
           <button type="submit" className="btn-luxe btn-luxe-hover w-full">
@@ -257,7 +257,7 @@ function Field({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-3 text-ivory text-sm focus:outline-none focus:border-marguerite"
+        className="w-full bg-ivory-soft/40 border border-border rounded-sm px-4 py-3 text-onyx text-sm focus:outline-none focus:border-marguerite"
       />
     </div>
   );

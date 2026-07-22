@@ -42,7 +42,7 @@ function Catalogo() {
     <div className="container-luxe py-16">
       <div className="text-center mb-12">
         <div className="eyebrow mb-3">Coleção Completa</div>
-        <h1 className="font-display text-5xl md:text-6xl text-ivory">Catálogo</h1>
+        <h1 className="font-display text-5xl md:text-6xl text-onyx">Catálogo</h1>
         <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
           {filtered.length} peças disponíveis · Prata 925 com certificado
         </p>
@@ -58,7 +58,7 @@ function Catalogo() {
               value={q}
               onChange={(e) => setQ(e.target.value)}
               placeholder="Buscar peça..."
-              className="w-full pl-10 pr-3 py-3 bg-onyx-soft/40 border border-border rounded-sm text-sm text-ivory placeholder:text-muted-foreground focus:outline-none focus:border-marguerite transition"
+              className="w-full pl-10 pr-3 py-3 bg-ivory-soft/40 border border-border rounded-sm text-sm text-onyx placeholder:text-muted-foreground focus:outline-none focus:border-marguerite transition"
             />
           </div>
 
@@ -70,7 +70,7 @@ function Catalogo() {
                   key={c.id}
                   onClick={() => setCat(c.id)}
                   className={`block w-full text-left text-sm py-2 transition ${
-                    cat === c.id ? "text-marguerite" : "text-ivory/70 hover:text-ivory"
+                    cat === c.id ? "text-marguerite" : "text-onyx/70 hover:text-onyx"
                   }`}
                 >
                   {c.label}
@@ -90,7 +90,7 @@ function Catalogo() {
               onChange={(e) => setMax(Number(e.target.value))}
               className="w-full accent-marguerite"
             />
-            <div className="mt-2 text-sm text-ivory">{formatBRL(max)}</div>
+            <div className="mt-2 text-sm text-onyx">{formatBRL(max)}</div>
           </div>
         </aside>
 
@@ -103,7 +103,7 @@ function Catalogo() {
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value as Sort)}
-              className="bg-onyx-soft/40 border border-border rounded-sm text-sm text-ivory px-3 py-2 focus:outline-none focus:border-marguerite"
+              className="bg-ivory-soft/40 border border-border rounded-sm text-sm text-onyx px-3 py-2 focus:outline-none focus:border-marguerite"
             >
               <option value="relevancia">Relevância</option>
               <option value="novos">Lançamentos</option>

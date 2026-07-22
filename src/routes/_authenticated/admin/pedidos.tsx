@@ -73,7 +73,7 @@ function PedidosAdmin() {
     <div>
       <header className="mb-8">
         <div className="eyebrow mb-2">Vendas</div>
-        <h1 className="font-display text-4xl text-ivory">Pedidos</h1>
+        <h1 className="font-display text-4xl text-onyx">Pedidos</h1>
       </header>
 
       <div className="flex flex-wrap gap-3 mb-6">
@@ -82,12 +82,12 @@ function PedidosAdmin() {
           <input
             value={q} onChange={(e) => setQ(e.target.value)}
             placeholder="Buscar por cliente ou número"
-            className="w-full pl-10 pr-3 py-2.5 bg-onyx-soft/40 border border-border rounded-sm text-sm text-ivory focus:outline-none focus:border-marguerite"
+            className="w-full pl-10 pr-3 py-2.5 bg-ivory-soft/40 border border-border rounded-sm text-sm text-onyx focus:outline-none focus:border-marguerite"
           />
         </div>
         <select
           value={filter} onChange={(e) => setFilter(e.target.value as Status | "todos")}
-          className="bg-onyx-soft/40 border border-border rounded-sm text-sm text-ivory px-3 py-2.5 focus:outline-none focus:border-marguerite"
+          className="bg-ivory-soft/40 border border-border rounded-sm text-sm text-onyx px-3 py-2.5 focus:outline-none focus:border-marguerite"
         >
           <option value="todos">Todos status</option>
           {STATUS.map((s) => <option key={s} value={s}>{STATUS_LABEL[s]}</option>)}
@@ -114,16 +114,16 @@ function PedidosAdmin() {
             </thead>
             <tbody>
               {filtered.map((p) => (
-                <tr key={p.id} onClick={() => setSelected(p)} className="border-b border-border/40 last:border-0 cursor-pointer hover:bg-onyx-soft/50">
+                <tr key={p.id} onClick={() => setSelected(p)} className="border-b border-border/40 last:border-0 cursor-pointer hover:bg-ivory-soft/50">
                   <td className="p-4 text-marguerite font-mono">#{p.numero}</td>
-                  <td className="p-4 text-ivory/80">{new Date(p.created_at).toLocaleDateString("pt-BR")}</td>
-                  <td className="p-4 text-ivory">{p.cliente_nome}</td>
-                  <td className="p-4 text-ivory">{formatBRL(Number(p.valor_total))}</td>
+                  <td className="p-4 text-onyx/80">{new Date(p.created_at).toLocaleDateString("pt-BR")}</td>
+                  <td className="p-4 text-onyx">{p.cliente_nome}</td>
+                  <td className="p-4 text-onyx">{formatBRL(Number(p.valor_total))}</td>
                   <td className="p-4" onClick={(e) => e.stopPropagation()}>
                     <select
                       value={p.status}
                       onChange={(e) => update.mutate({ id: p.id, status: e.target.value as Status })}
-                      className="bg-onyx-soft border border-border rounded-sm px-2 py-1 text-xs text-ivory focus:outline-none focus:border-marguerite"
+                      className="bg-ivory-soft border border-border rounded-sm px-2 py-1 text-xs text-onyx focus:outline-none focus:border-marguerite"
                     >
                       {STATUS.map((s) => <option key={s} value={s}>{STATUS_LABEL[s]}</option>)}
                     </select>
@@ -142,14 +142,14 @@ function PedidosAdmin() {
 
 function PedidoDialog({ pedido, onClose }: { pedido: Pedido; onClose: () => void }) {
   return (
-    <div className="fixed inset-0 z-50 bg-onyx/80 backdrop-blur-sm grid place-items-center p-6 overflow-auto">
+    <div className="fixed inset-0 z-50 bg-ivory/80 backdrop-blur-sm grid place-items-center p-6 overflow-auto">
       <div className="w-full max-w-xl bg-card border border-border rounded-sm p-8 my-10 space-y-5">
         <div className="flex justify-between">
           <div>
             <div className="eyebrow">Pedido</div>
             <h2 className="font-display text-3xl text-marguerite">#{pedido.numero}</h2>
           </div>
-          <button onClick={onClose} className="text-muted-foreground hover:text-ivory">✕</button>
+          <button onClick={onClose} className="text-muted-foreground hover:text-onyx">✕</button>
         </div>
 
         <div className="hairline" />
@@ -164,7 +164,7 @@ function PedidoDialog({ pedido, onClose }: { pedido: Pedido; onClose: () => void
         {pedido.endereco && (
           <div>
             <div className="eyebrow mb-2">Endereço</div>
-            <div className="text-sm text-ivory/80">
+            <div className="text-sm text-onyx/80">
               {pedido.endereco.endereco}, {pedido.endereco.numero}
               {pedido.endereco.complemento && ` - ${pedido.endereco.complemento}`}<br />
               {pedido.endereco.bairro} - {pedido.endereco.cidade}/{pedido.endereco.estado}<br />
@@ -177,7 +177,7 @@ function PedidoDialog({ pedido, onClose }: { pedido: Pedido; onClose: () => void
           <div className="eyebrow mb-2">Itens</div>
           <div className="space-y-2">
             {pedido.itens.map((i, idx) => (
-              <div key={idx} className="flex justify-between text-sm text-ivory/90">
+              <div key={idx} className="flex justify-between text-sm text-onyx/90">
                 <span>{i.qty}x {i.nome}</span>
                 <span>{formatBRL(i.qty * i.preco)}</span>
               </div>
@@ -188,9 +188,9 @@ function PedidoDialog({ pedido, onClose }: { pedido: Pedido; onClose: () => void
         <div className="hairline" />
 
         <div className="space-y-1 text-sm">
-          <div className="flex justify-between text-ivory/80"><span>Subtotal</span><span>{formatBRL(Number(pedido.subtotal))}</span></div>
+          <div className="flex justify-between text-onyx/80"><span>Subtotal</span><span>{formatBRL(Number(pedido.subtotal))}</span></div>
           {Number(pedido.desconto) > 0 && <div className="flex justify-between text-marguerite"><span>Desconto</span><span>-{formatBRL(Number(pedido.desconto))}</span></div>}
-          <div className="flex justify-between text-ivory/80"><span>Frete</span><span>{formatBRL(Number(pedido.frete))}</span></div>
+          <div className="flex justify-between text-onyx/80"><span>Frete</span><span>{formatBRL(Number(pedido.frete))}</span></div>
           <div className="flex justify-between font-display text-lg text-gradient-marguerite pt-2"><span>Total</span><span>{formatBRL(Number(pedido.valor_total))}</span></div>
         </div>
       </div>
@@ -202,7 +202,7 @@ function Info({ label, value }: { label: string; value: string }) {
   return (
     <div>
       <div className="eyebrow text-[0.6rem]">{label}</div>
-      <div className="text-ivory mt-1">{value}</div>
+      <div className="text-onyx mt-1">{value}</div>
     </div>
   );
 }

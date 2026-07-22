@@ -25,10 +25,10 @@ function Sobre() {
         </div>
         <div className="container-luxe relative py-32 text-center">
           <div className="eyebrow mb-4">Nossa História</div>
-          <h1 className="font-display text-5xl md:text-7xl text-ivory max-w-3xl mx-auto leading-[1.05]">
+          <h1 className="font-display text-5xl md:text-7xl text-onyx max-w-3xl mx-auto leading-[1.05]">
             Uma marca nascida do <em className="text-gradient-marguerite not-italic">brilho</em>
           </h1>
-          <p className="mt-6 max-w-2xl mx-auto text-ivory/80">
+          <p className="mt-6 max-w-2xl mx-auto text-onyx/80">
             Marguerite Jóias é a tradução do desejo por peças que ultrapassem tendências —
             joias que se tornam herança.
           </p>
@@ -38,10 +38,10 @@ function Sobre() {
       <section className="container-luxe py-24 grid lg:grid-cols-2 gap-16 items-center">
         <div>
           <div className="eyebrow mb-4">Nossa Trajetória</div>
-          <h2 className="font-display text-4xl text-ivory leading-tight">
+          <h2 className="font-display text-4xl text-onyx leading-tight">
             Tradição joalheira encontra design contemporâneo.
           </h2>
-          <div className="mt-8 space-y-5 text-ivory/80 leading-relaxed">
+          <div className="mt-8 space-y-5 text-onyx/80 leading-relaxed">
             <p>
               Fundada em Goiânia, a Marguerite Jóias nasceu da paixão por joalheria autoral.
               Cada peça é desenhada no ateliê e produzida em pequenas séries por
@@ -63,11 +63,11 @@ function Sobre() {
         </div>
       </section>
 
-      <section className="bg-onyx-soft/30 py-24">
+      <section className="bg-ivory-soft/30 py-24">
         <div className="container-luxe">
           <div className="text-center mb-14">
             <div className="eyebrow mb-3">Pilares</div>
-            <h2 className="font-display text-4xl text-ivory">Missão, Visão e Valores</h2>
+            <h2 className="font-display text-4xl text-onyx">Missão, Visão e Valores</h2>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {[
@@ -79,7 +79,7 @@ function Sobre() {
                 <div className="grid h-14 w-14 mx-auto place-items-center rounded-full border border-marguerite/40 text-marguerite mb-5">
                   <Icon className="h-6 w-6" />
                 </div>
-                <div className="font-display text-2xl text-ivory">{t}</div>
+                <div className="font-display text-2xl text-onyx">{t}</div>
                 <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{d}</p>
               </div>
             ))}

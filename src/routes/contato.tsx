@@ -33,7 +33,7 @@ function Contato() {
     <div className="container-luxe py-20">
       <div className="text-center mb-16">
         <div className="eyebrow mb-3">Fale Conosco</div>
-        <h1 className="font-display text-5xl md:text-6xl text-ivory">Contato</h1>
+        <h1 className="font-display text-5xl md:text-6xl text-onyx">Contato</h1>
         <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
           Atendimento personalizado para tirar dúvidas, sugerir presentes ou criar uma peça sob encomenda.
         </p>
@@ -46,7 +46,7 @@ function Contato() {
             <input
               value={form.nome}
               onChange={(e) => setForm({ ...form, nome: e.target.value })}
-              className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-3 text-ivory focus:outline-none focus:border-marguerite"
+              className="w-full bg-ivory-soft/40 border border-border rounded-sm px-4 py-3 text-onyx focus:outline-none focus:border-marguerite"
               placeholder="Seu nome completo"
             />
           </div>
@@ -56,7 +56,7 @@ function Contato() {
               type="email"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-3 text-ivory focus:outline-none focus:border-marguerite"
+              className="w-full bg-ivory-soft/40 border border-border rounded-sm px-4 py-3 text-onyx focus:outline-none focus:border-marguerite"
               placeholder="seu@email.com"
             />
           </div>
@@ -66,7 +66,7 @@ function Contato() {
               rows={6}
               value={form.mensagem}
               onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
-              className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-3 text-ivory focus:outline-none focus:border-marguerite resize-none"
+              className="w-full bg-ivory-soft/40 border border-border rounded-sm px-4 py-3 text-onyx focus:outline-none focus:border-marguerite resize-none"
               placeholder="Como podemos ajudar?"
             />
           </div>
@@ -89,7 +89,7 @@ function Contato() {
                 </div>
                 <div>
                   <div className="eyebrow mb-1">{t}</div>
-                  <div className="text-ivory">{d}</div>
+                  <div className="text-onyx">{d}</div>
                 </div>
               </div>
             );
@@ -101,10 +101,10 @@ function Contato() {
           })}
 
           <div className="flex gap-3 pt-4">
-            <a href="https://instagram.com" className="grid h-12 w-12 place-items-center rounded-full border border-border hover:border-marguerite hover:text-marguerite text-ivory transition">
+            <a href="https://instagram.com" className="grid h-12 w-12 place-items-center rounded-full border border-border hover:border-marguerite hover:text-marguerite text-onyx transition">
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="https://facebook.com" className="grid h-12 w-12 place-items-center rounded-full border border-border hover:border-marguerite hover:text-marguerite text-ivory transition">
+            <a href="https://facebook.com" className="grid h-12 w-12 place-items-center rounded-full border border-border hover:border-marguerite hover:text-marguerite text-onyx transition">
               <Facebook className="h-5 w-5" />
             </a>
           </div>

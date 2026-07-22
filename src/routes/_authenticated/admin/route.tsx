@@ -52,13 +52,13 @@ function AdminLayout() {
 
   return (
     <div className="min-h-screen grid lg:grid-cols-[260px_1fr]">
-      <aside className="border-r border-border/60 bg-onyx-soft/40 p-6 lg:sticky lg:top-0 lg:h-screen flex flex-col">
+      <aside className="border-r border-border/60 bg-ivory-soft/40 p-6 lg:sticky lg:top-0 lg:h-screen flex flex-col">
         <Link to="/admin" className="flex items-center gap-3 mb-10">
           <span className="grid h-11 w-11 place-items-center rounded-full border border-marguerite/50 font-display text-2xl text-gradient-marguerite">
             C
           </span>
           <div>
-            <div className="font-display text-lg text-ivory leading-none">Marguerite Jóias</div>
+            <div className="font-display text-lg text-onyx leading-none">Marguerite Jóias</div>
             <div className="eyebrow mt-1 text-[0.6rem]">Admin</div>
           </div>
         </Link>
@@ -73,7 +73,7 @@ function AdminLayout() {
                 key={n.to}
                 to={n.to}
                 className={`flex items-center gap-3 rounded-sm px-3 py-2.5 text-sm transition ${
-                  active ? "bg-marguerite/10 text-marguerite" : "text-ivory/70 hover:bg-onyx-soft hover:text-ivory"
+                  active ? "bg-marguerite/10 text-marguerite" : "text-onyx/70 hover:bg-ivory-soft hover:text-onyx"
                 }`}
               >
                 <n.icon className="h-4 w-4" />

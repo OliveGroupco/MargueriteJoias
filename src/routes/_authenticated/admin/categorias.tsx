@@ -54,7 +54,7 @@ function Categorias() {
     <div>
       <header className="mb-8">
         <div className="eyebrow mb-2">Organização</div>
-        <h1 className="font-display text-4xl text-ivory">Categorias</h1>
+        <h1 className="font-display text-4xl text-onyx">Categorias</h1>
       </header>
 
       <div className="grid lg:grid-cols-[1fr_320px] gap-8">
@@ -70,7 +70,7 @@ function Categorias() {
               {data.map((c) => (
                 <div key={c.id} className="flex items-center justify-between p-4 border border-border/60 rounded-sm bg-card/30">
                   <div>
-                    <div className="text-ivory">{c.nome}</div>
+                    <div className="text-onyx">{c.nome}</div>
                     <div className="text-xs text-muted-foreground">{c.slug}</div>
                   </div>
                   <button
@@ -86,14 +86,14 @@ function Categorias() {
         </div>
 
         <aside className="h-fit p-6 border border-border/60 rounded-sm bg-card/30 space-y-4">
-          <h2 className="font-display text-xl text-ivory">Nova categoria</h2>
+          <h2 className="font-display text-xl text-onyx">Nova categoria</h2>
           <div>
             <label className="eyebrow block mb-2">Nome</label>
-            <input value={nome} onChange={(e) => setNome(e.target.value)} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-ivory focus:outline-none focus:border-marguerite" />
+            <input value={nome} onChange={(e) => setNome(e.target.value)} className="w-full bg-ivory-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-onyx focus:outline-none focus:border-marguerite" />
           </div>
           <div>
             <label className="eyebrow block mb-2">Descrição</label>
-            <textarea rows={3} value={desc} onChange={(e) => setDesc(e.target.value)} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-ivory focus:outline-none focus:border-marguerite resize-none" />
+            <textarea rows={3} value={desc} onChange={(e) => setDesc(e.target.value)} className="w-full bg-ivory-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-onyx focus:outline-none focus:border-marguerite resize-none" />
           </div>
           <button onClick={() => nome.trim() && create.mutate()} disabled={!nome.trim() || create.isPending} className="btn-luxe btn-luxe-hover w-full disabled:opacity-50">
             <Plus className="h-4 w-4" /> Adicionar

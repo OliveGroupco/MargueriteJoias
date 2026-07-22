@@ -72,7 +72,7 @@ function CuponsAdmin() {
     <div>
       <header className="mb-8">
         <div className="eyebrow mb-2">Promoções</div>
-        <h1 className="font-display text-4xl text-ivory">Cupons</h1>
+        <h1 className="font-display text-4xl text-onyx">Cupons</h1>
       </header>
 
       <div className="grid lg:grid-cols-[1fr_360px] gap-8">
@@ -97,7 +97,7 @@ function CuponsAdmin() {
                     {c.descricao && <div className="text-xs text-muted-foreground mt-1">{c.descricao}</div>}
                     {c.validade && <div className="text-xs text-muted-foreground mt-1">Válido até {new Date(c.validade).toLocaleDateString("pt-BR")}</div>}
                   </div>
-                  <label className="flex items-center gap-2 text-xs text-ivory cursor-pointer">
+                  <label className="flex items-center gap-2 text-xs text-onyx cursor-pointer">
                     <input type="checkbox" checked={c.ativo} onChange={(e) => toggle.mutate({ id: c.id, ativo: e.target.checked })} className="accent-marguerite" />
                     Ativo
                   </label>
@@ -114,22 +114,22 @@ function CuponsAdmin() {
         </div>
 
         <aside className="h-fit p-6 border border-border/60 rounded-sm bg-card/30 space-y-4">
-          <h2 className="font-display text-xl text-ivory">Novo cupom</h2>
+          <h2 className="font-display text-xl text-onyx">Novo cupom</h2>
           <div>
             <label className="eyebrow block mb-2">Código</label>
-            <input value={form.codigo} onChange={(e) => setForm({ ...form, codigo: e.target.value.toUpperCase() })} placeholder="CINTILA10" className="w-full bg-onyx-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-ivory uppercase focus:outline-none focus:border-marguerite" />
+            <input value={form.codigo} onChange={(e) => setForm({ ...form, codigo: e.target.value.toUpperCase() })} placeholder="CINTILA10" className="w-full bg-ivory-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-onyx uppercase focus:outline-none focus:border-marguerite" />
           </div>
           <div>
             <label className="eyebrow block mb-2">Descrição</label>
-            <input value={form.descricao} onChange={(e) => setForm({ ...form, descricao: e.target.value })} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-ivory focus:outline-none focus:border-marguerite" />
+            <input value={form.descricao} onChange={(e) => setForm({ ...form, descricao: e.target.value })} className="w-full bg-ivory-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-onyx focus:outline-none focus:border-marguerite" />
           </div>
           <div>
             <label className="eyebrow block mb-2">Desconto (%)</label>
-            <input type="number" min={1} max={100} value={form.desconto_percent} onChange={(e) => setForm({ ...form, desconto_percent: Number(e.target.value) })} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-ivory focus:outline-none focus:border-marguerite" />
+            <input type="number" min={1} max={100} value={form.desconto_percent} onChange={(e) => setForm({ ...form, desconto_percent: Number(e.target.value) })} className="w-full bg-ivory-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-onyx focus:outline-none focus:border-marguerite" />
           </div>
           <div>
             <label className="eyebrow block mb-2">Validade</label>
-            <input type="date" value={form.validade} onChange={(e) => setForm({ ...form, validade: e.target.value })} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-ivory focus:outline-none focus:border-marguerite" />
+            <input type="date" value={form.validade} onChange={(e) => setForm({ ...form, validade: e.target.value })} className="w-full bg-ivory-soft/40 border border-border rounded-sm px-3 py-2 text-sm text-onyx focus:outline-none focus:border-marguerite" />
           </div>
           <button onClick={() => form.codigo.trim() && create.mutate()} disabled={!form.codigo.trim() || create.isPending} className="btn-luxe btn-luxe-hover w-full disabled:opacity-50">
             <Plus className="h-4 w-4" /> Criar Cupom

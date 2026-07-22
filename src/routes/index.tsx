@@ -36,10 +36,10 @@ function Home() {
         <div className="container-luxe relative grid min-h-[85vh] items-center py-24">
           <div className="max-w-2xl animate-fade-up">
             <div className="eyebrow mb-6">Coleção Inverno 2026</div>
-            <h1 className="font-display text-5xl md:text-7xl leading-[1.05] text-ivory">
+            <h1 className="font-display text-5xl md:text-7xl leading-[1.05] text-onyx">
               Sua beleza é <em className="text-gradient-marguerite not-italic">única</em> e merece joias à altura!
             </h1>
-            <p className="mt-8 max-w-xl text-base md:text-lg text-ivory/80 leading-relaxed">
+            <p className="mt-8 max-w-xl text-base md:text-lg text-onyx/80 leading-relaxed">
               Loja on-line (Varejo) de joias contemporâneas em prata. Enviamos para todo o Brasil diretamente de Goiânia - GO.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
@@ -74,7 +74,7 @@ function Home() {
                 <Icon className="h-5 w-5" />
               </div>
               <div className="min-w-0">
-                <div className="font-display text-lg text-ivory">{t}</div>
+                <div className="font-display text-lg text-onyx">{t}</div>
                 <div className="text-sm text-muted-foreground mt-1">{d}</div>
               </div>
             </div>
@@ -86,7 +86,7 @@ function Home() {
       <section className="container-luxe py-20">
         <div className="text-center mb-14">
           <div className="eyebrow mb-4">Coleções</div>
-          <h2 className="font-display text-4xl md:text-5xl text-ivory">
+          <h2 className="font-display text-4xl md:text-5xl text-onyx">
             Cada categoria, uma história
           </h2>
         </div>
@@ -108,7 +108,7 @@ function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-onyx via-onyx/40 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6">
-                  <div className="font-display text-2xl text-ivory">{cat.label}</div>
+                  <div className="font-display text-2xl text-onyx">{cat.label}</div>
                   <div className="text-xs text-marguerite mt-1 tracking-[0.2em] uppercase">
                     {cat.description}
                   </div>
@@ -124,7 +124,7 @@ function Home() {
         <div className="flex items-end justify-between mb-12">
           <div>
             <div className="eyebrow mb-4">Selecionados</div>
-            <h2 className="font-display text-4xl md:text-5xl text-ivory">Em destaque</h2>
+            <h2 className="font-display text-4xl md:text-5xl text-onyx">Em destaque</h2>
           </div>
           <Link
             to="/catalogo"
@@ -147,11 +147,11 @@ function Home() {
       </section>
 
       {/* DEPOIMENTOS */}
-      <section className="bg-onyx-soft/30 py-24 mt-12">
+      <section className="bg-ivory-soft/30 py-24 mt-12">
         <div className="container-luxe">
           <div className="text-center mb-14">
             <div className="eyebrow mb-4">Clientes</div>
-            <h2 className="font-display text-4xl md:text-5xl text-ivory">
+            <h2 className="font-display text-4xl md:text-5xl text-onyx">
               Histórias que brilham
             </h2>
           </div>
@@ -167,7 +167,7 @@ function Home() {
                     <Star key={i} className="h-4 w-4 fill-current" />
                   ))}
                 </div>
-                <blockquote className="font-display text-lg text-ivory/90 leading-relaxed">
+                <blockquote className="font-display text-lg text-onyx/90 leading-relaxed">
                   "{d.t}"
                 </blockquote>
                 <figcaption className="mt-6 text-sm">
@@ -186,7 +186,7 @@ function Home() {
           <div className="absolute inset-0 opacity-30" style={{ background: "var(--gradient-luxe)" }} />
           <div className="relative">
             <div className="eyebrow mb-4">Atendimento Personalizado</div>
-            <h2 className="font-display text-4xl md:text-5xl text-ivory max-w-2xl mx-auto">
+            <h2 className="font-display text-4xl md:text-5xl text-onyx max-w-2xl mx-auto">
               Sua joia ideal, escolhida a quatro mãos.
             </h2>
             <p className="mt-6 max-w-xl mx-auto text-muted-foreground">

@@ -46,24 +46,24 @@
   --marguerite-deep: oklch(0.55 0.16 45);  /* #B25A2A Deep */
   --ivory: oklch(0.96 0.012 80);         /* #F2EADF */
 
-  --background: var(--onyx);
-  --foreground: var(--ivory);
-  --card: oklch(0.2 0.008 60);
-  --card-foreground: var(--ivory);
-  --popover: oklch(0.2 0.008 60);
-  --popover-foreground: var(--ivory);
+  --background: var(--ivory);
+  --foreground: var(--onyx);
+  --card: oklch(0.98 0.005 80);
+  --card-foreground: var(--onyx);
+  --popover: oklch(0.98 0.005 80);
+  --popover-foreground: var(--onyx);
   --primary: var(--marguerite);
   --primary-foreground: var(--ivory);
-  --secondary: oklch(0.26 0.012 60);
-  --secondary-foreground: var(--ivory);
-  --muted: oklch(0.24 0.01 60);
-  --muted-foreground: oklch(0.7 0.02 70);
+  --secondary: oklch(0.94 0.01 80);
+  --secondary-foreground: var(--onyx);
+  --muted: oklch(0.92 0.01 80);
+  --muted-foreground: oklch(0.5 0.02 70);
   --accent: var(--marguerite-deep);
   --accent-foreground: var(--ivory);
   --destructive: oklch(0.55 0.2 25);
   --destructive-foreground: var(--ivory);
-  --border: oklch(0.32 0.012 65 / 60%);
-  --input: oklch(0.3 0.012 65);
+  --border: oklch(0.85 0.012 80 / 60%);
+  --input: oklch(0.85 0.012 80);
   --ring: var(--marguerite);
 
   --gradient-luxe: linear-gradient(135deg, oklch(0.16 0.005 60) 0%, oklch(0.22 0.012 60) 50%, oklch(0.18 0.01 65) 100%);

@@ -34,7 +34,7 @@ function Dashboard() {
     <div>
       <header className="mb-10">
         <div className="eyebrow mb-2">Painel</div>
-        <h1 className="font-display text-4xl text-ivory">Dashboard</h1>
+        <h1 className="font-display text-4xl text-onyx">Dashboard</h1>
         <p className="text-sm text-muted-foreground mt-2">Visão geral da loja</p>
       </header>
 
@@ -46,7 +46,7 @@ function Dashboard() {
       </div>
 
       <section className="mt-12">
-        <h2 className="font-display text-2xl text-ivory mb-5">Pedidos recentes</h2>
+        <h2 className="font-display text-2xl text-onyx mb-5">Pedidos recentes</h2>
         <div className="border border-border/60 rounded-sm bg-card/30">
           {!stats || stats.recentes.length === 0 ? (
             <div className="p-10 text-center text-muted-foreground text-sm">
@@ -63,7 +63,7 @@ function Dashboard() {
               </thead>
               <tbody>
                 {stats.recentes.map((p, i) => (
-                  <tr key={i} className="border-b border-border/40 last:border-0 text-ivory/90">
+                  <tr key={i} className="border-b border-border/40 last:border-0 text-onyx/90">
                     <td className="p-4">{new Date(p.created_at).toLocaleDateString("pt-BR")}</td>
                     <td className="p-4 capitalize">{p.status.replace("_", " ")}</td>
                     <td className="p-4 text-right">{formatBRL(Number(p.valor_total))}</td>
@@ -85,7 +85,7 @@ function Stat({ icon: Icon, label, value, accent }: { icon: typeof Package; labe
         <div className="eyebrow">{label}</div>
         <Icon className={`h-4 w-4 ${accent ? "text-marguerite" : "text-muted-foreground"}`} />
       </div>
-      <div className="font-display text-3xl text-ivory">{value}</div>
+      <div className="font-display text-3xl text-onyx">{value}</div>
     </div>
   );
 }

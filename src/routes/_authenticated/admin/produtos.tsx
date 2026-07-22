@@ -68,7 +68,7 @@ function ProdutosAdmin() {
       <header className="flex flex-wrap justify-between items-center gap-4 mb-8">
         <div>
           <div className="eyebrow mb-2">Catálogo</div>
-          <h1 className="font-display text-4xl text-ivory">Produtos</h1>
+          <h1 className="font-display text-4xl text-onyx">Produtos</h1>
         </div>
         <button
           onClick={() => { setEditing(null); setOpen(true); }}
@@ -105,7 +105,7 @@ function ProdutosAdmin() {
                         <img src={p.imagens[0]} alt="" className="h-12 w-12 object-cover rounded-sm" />
                       )}
                       <div>
-                        <div className="text-ivory flex items-center gap-2">
+                        <div className="text-onyx flex items-center gap-2">
                           {p.nome}
                           {p.destaque && <Star className="h-3 w-3 fill-marguerite text-marguerite" />}
                         </div>
@@ -113,8 +113,8 @@ function ProdutosAdmin() {
                       </div>
                     </div>
                   </td>
-                  <td className="p-4 text-ivory">{formatBRL(Number(p.preco))}</td>
-                  <td className="p-4 text-ivory">{p.estoque}</td>
+                  <td className="p-4 text-onyx">{formatBRL(Number(p.preco))}</td>
+                  <td className="p-4 text-onyx">{p.estoque}</td>
                   <td className="p-4">
                     <span className={`text-xs px-2 py-1 rounded-sm ${p.ativo ? "bg-marguerite/15 text-marguerite" : "bg-muted text-muted-foreground"}`}>
                       {p.ativo ? "Ativo" : "Inativo"}
@@ -194,13 +194,13 @@ function ProductDialog({
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-onyx/80 backdrop-blur-sm grid place-items-center p-6 overflow-auto">
+    <div className="fixed inset-0 z-50 bg-ivory/80 backdrop-blur-sm grid place-items-center p-6 overflow-auto">
       <div className="w-full max-w-2xl bg-card border border-border rounded-sm p-8 my-10">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="font-display text-2xl text-ivory">
+          <h2 className="font-display text-2xl text-onyx">
             {initial ? "Editar produto" : "Novo produto"}
           </h2>
-          <button onClick={onClose} className="text-muted-foreground hover:text-ivory"><X className="h-5 w-5" /></button>
+          <button onClick={onClose} className="text-muted-foreground hover:text-onyx"><X className="h-5 w-5" /></button>
         </div>
 
         <div className="space-y-4">
@@ -219,7 +219,7 @@ function ProductDialog({
             <select
               value={form.categoria_id ?? ""}
               onChange={(e) => setForm({ ...form, categoria_id: e.target.value || null })}
-              className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-3 text-ivory focus:outline-none focus:border-marguerite"
+              className="w-full bg-ivory-soft/40 border border-border rounded-sm px-4 py-3 text-onyx focus:outline-none focus:border-marguerite"
             >
               <option value="">— Sem categoria —</option>
               {categorias.map((c) => <option key={c.id} value={c.id}>{c.nome}</option>)}
@@ -233,7 +233,7 @@ function ProductDialog({
                 value={imgInput}
                 onChange={(e) => setImgInput(e.target.value)}
                 placeholder="https://..."
-                className="flex-1 bg-onyx-soft/40 border border-border rounded-sm px-4 py-2 text-sm text-ivory focus:outline-none focus:border-marguerite"
+                className="flex-1 bg-ivory-soft/40 border border-border rounded-sm px-4 py-2 text-sm text-onyx focus:outline-none focus:border-marguerite"
               />
               <button
                 onClick={() => { if (imgInput.trim()) { setForm({ ...form, imagens: [...form.imagens, imgInput.trim()] }); setImgInput(""); } }}
@@ -256,11 +256,11 @@ function ProductDialog({
           </div>
 
           <div className="flex gap-6 pt-2">
-            <label className="flex items-center gap-2 text-sm text-ivory cursor-pointer">
+            <label className="flex items-center gap-2 text-sm text-onyx cursor-pointer">
               <input type="checkbox" checked={form.destaque} onChange={(e) => setForm({ ...form, destaque: e.target.checked })} className="accent-marguerite" />
               Em destaque
             </label>
-            <label className="flex items-center gap-2 text-sm text-ivory cursor-pointer">
+            <label className="flex items-center gap-2 text-sm text-onyx cursor-pointer">
               <input type="checkbox" checked={form.ativo} onChange={(e) => setForm({ ...form, ativo: e.target.checked })} className="accent-marguerite" />
               Ativo
             </label>
@@ -283,7 +283,7 @@ function Input({ label, value, onChange, type = "text" }: { label: string; value
   return (
     <div>
       <label className="eyebrow block mb-2">{label}</label>
-      <input type={type} value={value} onChange={(e) => onChange(e.target.value)} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-2.5 text-sm text-ivory focus:outline-none focus:border-marguerite" />
+      <input type={type} value={value} onChange={(e) => onChange(e.target.value)} className="w-full bg-ivory-soft/40 border border-border rounded-sm px-4 py-2.5 text-sm text-onyx focus:outline-none focus:border-marguerite" />
     </div>
   );
 }
@@ -291,7 +291,7 @@ function Textarea({ label, value, onChange }: { label: string; value: string; on
   return (
     <div>
       <label className="eyebrow block mb-2">{label}</label>
-      <textarea rows={3} value={value} onChange={(e) => onChange(e.target.value)} className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-2.5 text-sm text-ivory focus:outline-none focus:border-marguerite resize-none" />
+      <textarea rows={3} value={value} onChange={(e) => onChange(e.target.value)} className="w-full bg-ivory-soft/40 border border-border rounded-sm px-4 py-2.5 text-sm text-onyx focus:outline-none focus:border-marguerite resize-none" />
     </div>
   );
 }

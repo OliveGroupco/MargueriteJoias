@@ -86,7 +86,7 @@ function AuthPage() {
           <span className="grid h-16 w-16 mx-auto place-items-center rounded-full border border-marguerite/50 font-display text-3xl text-gradient-marguerite mb-5">
             C
           </span>
-          <h1 className="font-display text-4xl text-ivory">
+          <h1 className="font-display text-4xl text-onyx">
             {mode === "login" ? "Acesso Administrativo" : mode === "forgot" ? "Recuperar Senha" : "Nova Senha"}
           </h1>
           <p className="mt-2 text-sm text-muted-foreground">
@@ -117,7 +117,7 @@ function AuthPage() {
 
           {(mode === "forgot" || mode === "reset") && (
             <div className="text-center mt-4">
-              <button type="button" onClick={() => setMode("login")} className="text-xs text-muted-foreground hover:text-ivory">
+              <button type="button" onClick={() => setMode("login")} className="text-xs text-muted-foreground hover:text-onyx">
                 Voltar para o login
               </button>
             </div>
@@ -139,7 +139,7 @@ function Field({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         required
-        className="w-full bg-onyx-soft/40 border border-border rounded-sm px-4 py-3 text-ivory focus:outline-none focus:border-marguerite"
+        className="w-full bg-ivory-soft/40 border border-border rounded-sm px-4 py-3 text-onyx focus:outline-none focus:border-marguerite"
       />
     </div>
   );
